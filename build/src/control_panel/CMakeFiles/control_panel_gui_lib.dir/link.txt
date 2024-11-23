@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcontrol_panel_gui_lib.a CMakeFiles/control_panel_gui_lib.dir/control_panel_gui.c.o
+/usr/bin/ranlib libcontrol_panel_gui_lib.a

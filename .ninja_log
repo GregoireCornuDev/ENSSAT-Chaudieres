@@ -1,0 +1,10 @@
+# ninja log v6
+14	291	1732367399327911569	CMakeFiles/MyApplication.dir/src/water_tank/thread_water_level.c.o	33a415ea7e3bdc93
+12	911	1732367399325911557	CMakeFiles/MyApplication.dir/src/main.c.o	9c19f4603fe2f210
+915	1226	1732367400228916736	MyApplication	f5a8158c156cfefb
+14	292	1732367399327911569	CMakeFiles/MyApplication.dir/src/water_tank/water_valve.c.o	f87b54676a023ba8
+13	915	1732367399326911563	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o	aba9c379e22e1e38
+2	486	1732370112534916467	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o	aba9c379e22e1e38
+3	495	1732370112534916467	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o	e7174a88afa55f4d
+2	556	1732370112533916435	CMakeFiles/MyApplication.dir/src/main.c.o	9c19f4603fe2f210
+556	682	1732370113087934034	MyApplication	7b312a030c151ec

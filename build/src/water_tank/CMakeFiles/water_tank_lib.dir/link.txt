@@ -1,0 +1,2 @@
+/usr/bin/ar qc libwater_tank_lib.a CMakeFiles/water_tank_lib.dir/thread_water_level.c.o CMakeFiles/water_tank_lib.dir/water_valve.c.o
+/usr/bin/ranlib libwater_tank_lib.a
