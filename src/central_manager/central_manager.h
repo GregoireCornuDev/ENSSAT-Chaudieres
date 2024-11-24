@@ -10,7 +10,6 @@ typedef struct {
     float water_average;  // Moyenne des valeurs d'eau
     int water_level_pipe[2]; // Pipe pour le niveau actuel de l'eau
     int water_average_pipe[2]; // Pipe pour le niveau actuel de l'eau
-
     float fuel_level;  // Niveau de carburant du réservoir (si applicable)
     float fuel_average;   // Moyenne des valeurs de carburant
 } CentralManagerData;

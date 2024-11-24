@@ -20,6 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyApplication.dir/src/main.c.o.d"
   "CMakeFiles/MyApplication.dir/src/pipes_manager.c.o"
   "CMakeFiles/MyApplication.dir/src/pipes_manager.c.o.d"
+  "CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o"
+  "CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o.d"
   "CMakeFiles/MyApplication.dir/src/threads_manager.c.o"
   "CMakeFiles/MyApplication.dir/src/threads_manager.c.o.d"
   "CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.o"

@@ -15,6 +15,7 @@ MyApplication: \
   CMakeFiles/MyApplication.dir/src/pipes_manager.c.o \
   CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o \
   CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o \
+  CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o \
   /usr/lib/x86_64-linux-gnu/libSDL2.so \
   /usr/lib/x86_64-linux-gnu/libSDL2_image.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a \
@@ -242,6 +243,8 @@ CMakeFiles/MyApplication.dir/src/pipes_manager.c.o:
 CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o:
 
 CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o:
+
+CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o:
 
 /usr/lib/x86_64-linux-gnu/libSDL2.so:
 

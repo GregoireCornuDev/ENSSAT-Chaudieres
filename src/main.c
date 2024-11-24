@@ -7,18 +7,27 @@
 #include "fuel_tank/fuel_tank_manager.h"
 #include "threads_manager.h"
 #include "pipes_manager.h"
+#include "tests/tests_pipes.h"
+
 
 int main()
 {
-    printf("let's go !\n");
+    printf("Let's go !\n");
 
-
+    // Déclarations des structures
     WaterTankSimulator waterSimulation;
     WaterTankManager waterManager;
     CentralManagerData centralManager;
     ControlPanelManager controlPanelManager;
 
-    //Démarrer tous les pipes
+    // Initialisation de CentralManagerData avant de l'utiliser
+    centralManager.water_level = 0.0;
+    centralManager.water_average = 0.0;
+    centralManager.fuel_level = 0.0;
+    centralManager.fuel_average = 0.0;
+
+
+    // Démarrer tous les pipes
     setup_water_pipes(&waterSimulation, &waterManager, &centralManager, &controlPanelManager);
 
     ThreadList thread_list;
@@ -27,21 +36,17 @@ int main()
     // Ajouter des threads
     thread_list_add(&thread_list, water_tank_simulation_thread, &waterSimulation);
     thread_list_add(&thread_list, water_tank_manager_thread, &waterManager);
-    thread_list_add(&thread_list, central_manager_thread, &centralManager);
     thread_list_add(&thread_list, control_panel_manager_thread, &controlPanelManager);
+    thread_list_add(&thread_list, central_manager_thread, &centralManager);
 
     // Démarrer tous les threads
     thread_list_start_all(&thread_list);
 
-    printf("Hello World!\n");
+    // Tests de DEBUG
+    test_pipes_communication(&waterSimulation, &waterManager, &centralManager, &controlPanelManager);
 
 
-    WaterTankManager water_tank;
-    //water_tank.water_level = 50;  // Niveau initial de l'eau
-
-    FuelTankManager fuel_tank;
-    //fuel_tank.fuel_level = 100;  // Niveau initial de carburant
-
+    sleep(30);
 
     // Gestion de la fenêtre
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {

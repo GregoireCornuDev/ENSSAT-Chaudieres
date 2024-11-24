@@ -1,7 +1,21 @@
 
 #include "values_average.h"
 
-void add_value_to_buffer(ValueBuffer *buffer, int new_value, int max_value) {
+#include <stdio.h>
+
+// Fonction pour initialiser un buffer
+void create_buffer(ValueBuffer *buffer, int buffer_size) {
+    // Initialiser les valeurs à 0
+    for (int i = 0; i < buffer_size; i++) {
+        buffer->values[i] = 0.0;
+    }
+    // Initialiser count et index
+    buffer->count = 0;
+    buffer->index = 0;
+}
+
+
+void add_value_to_buffer(ValueBuffer *buffer, float new_value, int max_value) {
     // Ajouter la nouvelle valeur dans le buffer
     buffer->values[buffer->index] = new_value;
 

@@ -6,12 +6,14 @@
 #define VALUES_AVERAGE_H
 
 typedef struct {
-    float values[10];  // Tableau pour stocker les valeurs (eau ou carburant)
-    int count;                // Nombre de valeurs actuellement dans le buffer
-    int index;                // Indice du prochain emplacement à écrire
+    float values[10];  // Tableau pour stocker les valeurs (niveau d'eau ou de carburant)
+    int count;         // Nombre de valeurs actuellement dans le buffer
+    int index;         // Indice du prochain emplacement à écrire dans le buffer
 } ValueBuffer;
 
-void add_value_to_buffer(ValueBuffer *buffer, int new_value, int max_value);
+void create_buffer(ValueBuffer *buffer, int buffer_size);
+
+void add_value_to_buffer(ValueBuffer *buffer, float new_value, int max_value);
 
 float calculate_average(ValueBuffer *buffer);
 

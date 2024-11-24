@@ -18,15 +18,11 @@ set(SOURCES
         src/control_panel/control_panel_gui.c
         src/control_panel/control_panel_config.c
         src/control_panel/control_panel_gauge.c
-        src/central_manager/central_manager.h
         src/central_manager/central_manager.c
         src/pipes_manager.c
-        src/pipes_manager.h
-        src/central_manager/values_average.h
         src/central_manager/values_average.c
         src/control_panel/control_panel_manager.c
-        src/control_panel/control_panel_manager.h
-
+        src/tests/tests_pipes.c
 )
 
 # Créer l'exécutable

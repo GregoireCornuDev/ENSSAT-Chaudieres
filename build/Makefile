@@ -369,6 +369,30 @@ src/pipes_manager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/pipes_manager.c.s
 .PHONY : src/pipes_manager.c.s
 
+src/tests/tests_pipes.o: src/tests/tests_pipes.c.o
+.PHONY : src/tests/tests_pipes.o
+
+# target to build an object file
+src/tests/tests_pipes.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o
+.PHONY : src/tests/tests_pipes.c.o
+
+src/tests/tests_pipes.i: src/tests/tests_pipes.c.i
+.PHONY : src/tests/tests_pipes.i
+
+# target to preprocess a source file
+src/tests/tests_pipes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.i
+.PHONY : src/tests/tests_pipes.c.i
+
+src/tests/tests_pipes.s: src/tests/tests_pipes.c.s
+.PHONY : src/tests/tests_pipes.s
+
+# target to generate assembly for a file
+src/tests/tests_pipes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.s
+.PHONY : src/tests/tests_pipes.c.s
+
 src/threads_manager.o: src/threads_manager.c.o
 .PHONY : src/threads_manager.o
 
@@ -480,6 +504,9 @@ help:
 	@echo "... src/pipes_manager.o"
 	@echo "... src/pipes_manager.i"
 	@echo "... src/pipes_manager.s"
+	@echo "... src/tests/tests_pipes.o"
+	@echo "... src/tests/tests_pipes.i"
+	@echo "... src/tests/tests_pipes.s"
 	@echo "... src/threads_manager.o"
 	@echo "... src/threads_manager.i"
 	@echo "... src/threads_manager.s"

@@ -8,7 +8,18 @@ void* water_tank_simulation_thread(void* arg) {
 
     init_water_tank(tank);
 
+
+
     float water_level = 40.0;
+
+
+    int i;
+    while(1)
+    {
+        // Rien
+        i = 0;
+    }
+
 
     while (1) {
         /*

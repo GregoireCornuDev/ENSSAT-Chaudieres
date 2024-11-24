@@ -12,14 +12,12 @@ void* control_panel_manager_thread(void* arg) {
     ControlPanelData data;
     float water_average = 0.0;
 
-    if (pipe(panel->water_average_pipe) == -1) {
-        perror("Erreur de création du pipe water_sensor_pipe");
-        exit(EXIT_FAILURE);
-    } else
+    int i;
+    while(1)
     {
-        printf("water average_pipe OK");
+        // Rien
+        i = 0;
     }
-
 
     while (1) {
         // Lire la moyenne de l'eau

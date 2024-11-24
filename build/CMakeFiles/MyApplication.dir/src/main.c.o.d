@@ -217,4 +217,6 @@ CMakeFiles/MyApplication.dir/src/main.c.o: \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_simulation.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/central_manager.h
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/central_manager.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/tests_pipes.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../central_manager/central_manager.h
