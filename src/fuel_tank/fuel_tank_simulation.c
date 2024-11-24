@@ -1,9 +1,11 @@
-#include "water_tank_simulation.h"
+#include "fuel_tank_simulation.h"
 #include <stdio.h>
 #include <unistd.h>
 
-void* water_tank_simulation(void* arg) {
-    WaterTank* tank = (WaterTank*)arg;
+
+// Fonction principale du thread
+void* fuel_tank_simulation_thread(void* arg) {
+    FuelTankSimulator* tank = (FuelTankSimulator*)arg;
     char supply_command, drain_command;
 
     while (1) {
@@ -25,16 +27,16 @@ void* water_tank_simulation(void* arg) {
             }
         }
 
-        // Mise à jour du niveau d'eau
+        // Mise à jour du niveau de fuel
         if (supply_command == '1') {
-            tank->water_level += 1;
+            tank->fuel_level += 1;
         }
         if (drain_command == '1') {
-            tank->water_level -= 2;
+            tank->fuel_level -= 2;
         }
 
-        // Affichage du niveau d'eau
-        printf("Current water level: %d\n", tank->water_level);
+        // Affichage du niveau de fuel
+        printf("Current fuel level: %d\n", tank->fuel_level);
 
         // Pause de 1 seconde
         sleep(1);

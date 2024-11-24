@@ -6,5 +6,13 @@ const ImageConfig control_panel_images[] = {
     {"resources/image2.png", {300, 50, 200, 200}} // Image 2 : position (300, 50), taille 200x200
 };
 
+// Configuration de la jauge (position et taille)
+const GaugeConfig control_panel_gauge_config = {
+    50, 50,    // Position de la jauge (X, Y)
+    30, 200,   // Taille de la jauge (largeur, hauteur)
+    {0, 255, 0, 255}, // Couleur avant (vert)
+    {50, 50, 50, 255}  // Couleur arrière (gris)
+};
+
 // Nombre total d'images
 const int control_panel_image_count = sizeof(control_panel_images) / sizeof(ImageConfig);

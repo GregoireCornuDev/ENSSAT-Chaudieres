@@ -129,6 +129,54 @@ MyApplication/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/build
 .PHONY : MyApplication/fast
 
+src/central_manager/central_manager.o: src/central_manager/central_manager.c.o
+.PHONY : src/central_manager/central_manager.o
+
+# target to build an object file
+src/central_manager/central_manager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o
+.PHONY : src/central_manager/central_manager.c.o
+
+src/central_manager/central_manager.i: src/central_manager/central_manager.c.i
+.PHONY : src/central_manager/central_manager.i
+
+# target to preprocess a source file
+src/central_manager/central_manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.i
+.PHONY : src/central_manager/central_manager.c.i
+
+src/central_manager/central_manager.s: src/central_manager/central_manager.c.s
+.PHONY : src/central_manager/central_manager.s
+
+# target to generate assembly for a file
+src/central_manager/central_manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.s
+.PHONY : src/central_manager/central_manager.c.s
+
+src/central_manager/values_average.o: src/central_manager/values_average.c.o
+.PHONY : src/central_manager/values_average.o
+
+# target to build an object file
+src/central_manager/values_average.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o
+.PHONY : src/central_manager/values_average.c.o
+
+src/central_manager/values_average.i: src/central_manager/values_average.c.i
+.PHONY : src/central_manager/values_average.i
+
+# target to preprocess a source file
+src/central_manager/values_average.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.i
+.PHONY : src/central_manager/values_average.c.i
+
+src/central_manager/values_average.s: src/central_manager/values_average.c.s
+.PHONY : src/central_manager/values_average.s
+
+# target to generate assembly for a file
+src/central_manager/values_average.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.s
+.PHONY : src/central_manager/values_average.c.s
+
 src/control_panel/control_panel_config.o: src/control_panel/control_panel_config.c.o
 .PHONY : src/control_panel/control_panel_config.o
 
@@ -152,6 +200,30 @@ src/control_panel/control_panel_config.s: src/control_panel/control_panel_config
 src/control_panel/control_panel_config.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.s
 .PHONY : src/control_panel/control_panel_config.c.s
+
+src/control_panel/control_panel_gauge.o: src/control_panel/control_panel_gauge.c.o
+.PHONY : src/control_panel/control_panel_gauge.o
+
+# target to build an object file
+src/control_panel/control_panel_gauge.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o
+.PHONY : src/control_panel/control_panel_gauge.c.o
+
+src/control_panel/control_panel_gauge.i: src/control_panel/control_panel_gauge.c.i
+.PHONY : src/control_panel/control_panel_gauge.i
+
+# target to preprocess a source file
+src/control_panel/control_panel_gauge.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.i
+.PHONY : src/control_panel/control_panel_gauge.c.i
+
+src/control_panel/control_panel_gauge.s: src/control_panel/control_panel_gauge.c.s
+.PHONY : src/control_panel/control_panel_gauge.s
+
+# target to generate assembly for a file
+src/control_panel/control_panel_gauge.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.s
+.PHONY : src/control_panel/control_panel_gauge.c.s
 
 src/control_panel/control_panel_gui.o: src/control_panel/control_panel_gui.c.o
 .PHONY : src/control_panel/control_panel_gui.o
@@ -177,6 +249,78 @@ src/control_panel/control_panel_gui.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.s
 .PHONY : src/control_panel/control_panel_gui.c.s
 
+src/control_panel/control_panel_manager.o: src/control_panel/control_panel_manager.c.o
+.PHONY : src/control_panel/control_panel_manager.o
+
+# target to build an object file
+src/control_panel/control_panel_manager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o
+.PHONY : src/control_panel/control_panel_manager.c.o
+
+src/control_panel/control_panel_manager.i: src/control_panel/control_panel_manager.c.i
+.PHONY : src/control_panel/control_panel_manager.i
+
+# target to preprocess a source file
+src/control_panel/control_panel_manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.i
+.PHONY : src/control_panel/control_panel_manager.c.i
+
+src/control_panel/control_panel_manager.s: src/control_panel/control_panel_manager.c.s
+.PHONY : src/control_panel/control_panel_manager.s
+
+# target to generate assembly for a file
+src/control_panel/control_panel_manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.s
+.PHONY : src/control_panel/control_panel_manager.c.s
+
+src/fuel_tank/fuel_tank_manager.o: src/fuel_tank/fuel_tank_manager.c.o
+.PHONY : src/fuel_tank/fuel_tank_manager.o
+
+# target to build an object file
+src/fuel_tank/fuel_tank_manager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o
+.PHONY : src/fuel_tank/fuel_tank_manager.c.o
+
+src/fuel_tank/fuel_tank_manager.i: src/fuel_tank/fuel_tank_manager.c.i
+.PHONY : src/fuel_tank/fuel_tank_manager.i
+
+# target to preprocess a source file
+src/fuel_tank/fuel_tank_manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.i
+.PHONY : src/fuel_tank/fuel_tank_manager.c.i
+
+src/fuel_tank/fuel_tank_manager.s: src/fuel_tank/fuel_tank_manager.c.s
+.PHONY : src/fuel_tank/fuel_tank_manager.s
+
+# target to generate assembly for a file
+src/fuel_tank/fuel_tank_manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.s
+.PHONY : src/fuel_tank/fuel_tank_manager.c.s
+
+src/fuel_tank/fuel_tank_simulation.o: src/fuel_tank/fuel_tank_simulation.c.o
+.PHONY : src/fuel_tank/fuel_tank_simulation.o
+
+# target to build an object file
+src/fuel_tank/fuel_tank_simulation.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.o
+.PHONY : src/fuel_tank/fuel_tank_simulation.c.o
+
+src/fuel_tank/fuel_tank_simulation.i: src/fuel_tank/fuel_tank_simulation.c.i
+.PHONY : src/fuel_tank/fuel_tank_simulation.i
+
+# target to preprocess a source file
+src/fuel_tank/fuel_tank_simulation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.i
+.PHONY : src/fuel_tank/fuel_tank_simulation.c.i
+
+src/fuel_tank/fuel_tank_simulation.s: src/fuel_tank/fuel_tank_simulation.c.s
+.PHONY : src/fuel_tank/fuel_tank_simulation.s
+
+# target to generate assembly for a file
+src/fuel_tank/fuel_tank_simulation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.s
+.PHONY : src/fuel_tank/fuel_tank_simulation.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -201,53 +345,101 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/water_tank/thread_water_level.o: src/water_tank/thread_water_level.c.o
-.PHONY : src/water_tank/thread_water_level.o
+src/pipes_manager.o: src/pipes_manager.c.o
+.PHONY : src/pipes_manager.o
 
 # target to build an object file
-src/water_tank/thread_water_level.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/thread_water_level.c.o
-.PHONY : src/water_tank/thread_water_level.c.o
+src/pipes_manager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/pipes_manager.c.o
+.PHONY : src/pipes_manager.c.o
 
-src/water_tank/thread_water_level.i: src/water_tank/thread_water_level.c.i
-.PHONY : src/water_tank/thread_water_level.i
+src/pipes_manager.i: src/pipes_manager.c.i
+.PHONY : src/pipes_manager.i
 
 # target to preprocess a source file
-src/water_tank/thread_water_level.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/thread_water_level.c.i
-.PHONY : src/water_tank/thread_water_level.c.i
+src/pipes_manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/pipes_manager.c.i
+.PHONY : src/pipes_manager.c.i
 
-src/water_tank/thread_water_level.s: src/water_tank/thread_water_level.c.s
-.PHONY : src/water_tank/thread_water_level.s
+src/pipes_manager.s: src/pipes_manager.c.s
+.PHONY : src/pipes_manager.s
 
 # target to generate assembly for a file
-src/water_tank/thread_water_level.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/thread_water_level.c.s
-.PHONY : src/water_tank/thread_water_level.c.s
+src/pipes_manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/pipes_manager.c.s
+.PHONY : src/pipes_manager.c.s
 
-src/water_tank/water_valve.o: src/water_tank/water_valve.c.o
-.PHONY : src/water_tank/water_valve.o
+src/threads_manager.o: src/threads_manager.c.o
+.PHONY : src/threads_manager.o
 
 # target to build an object file
-src/water_tank/water_valve.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_valve.c.o
-.PHONY : src/water_tank/water_valve.c.o
+src/threads_manager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/threads_manager.c.o
+.PHONY : src/threads_manager.c.o
 
-src/water_tank/water_valve.i: src/water_tank/water_valve.c.i
-.PHONY : src/water_tank/water_valve.i
+src/threads_manager.i: src/threads_manager.c.i
+.PHONY : src/threads_manager.i
 
 # target to preprocess a source file
-src/water_tank/water_valve.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_valve.c.i
-.PHONY : src/water_tank/water_valve.c.i
+src/threads_manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/threads_manager.c.i
+.PHONY : src/threads_manager.c.i
 
-src/water_tank/water_valve.s: src/water_tank/water_valve.c.s
-.PHONY : src/water_tank/water_valve.s
+src/threads_manager.s: src/threads_manager.c.s
+.PHONY : src/threads_manager.s
 
 # target to generate assembly for a file
-src/water_tank/water_valve.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_valve.c.s
-.PHONY : src/water_tank/water_valve.c.s
+src/threads_manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/threads_manager.c.s
+.PHONY : src/threads_manager.c.s
+
+src/water_tank/water_tank_manager.o: src/water_tank/water_tank_manager.c.o
+.PHONY : src/water_tank/water_tank_manager.o
+
+# target to build an object file
+src/water_tank/water_tank_manager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.o
+.PHONY : src/water_tank/water_tank_manager.c.o
+
+src/water_tank/water_tank_manager.i: src/water_tank/water_tank_manager.c.i
+.PHONY : src/water_tank/water_tank_manager.i
+
+# target to preprocess a source file
+src/water_tank/water_tank_manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.i
+.PHONY : src/water_tank/water_tank_manager.c.i
+
+src/water_tank/water_tank_manager.s: src/water_tank/water_tank_manager.c.s
+.PHONY : src/water_tank/water_tank_manager.s
+
+# target to generate assembly for a file
+src/water_tank/water_tank_manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.s
+.PHONY : src/water_tank/water_tank_manager.c.s
+
+src/water_tank/water_tank_simulation.o: src/water_tank/water_tank_simulation.c.o
+.PHONY : src/water_tank/water_tank_simulation.o
+
+# target to build an object file
+src/water_tank/water_tank_simulation.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o
+.PHONY : src/water_tank/water_tank_simulation.c.o
+
+src/water_tank/water_tank_simulation.i: src/water_tank/water_tank_simulation.c.i
+.PHONY : src/water_tank/water_tank_simulation.i
+
+# target to preprocess a source file
+src/water_tank/water_tank_simulation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.i
+.PHONY : src/water_tank/water_tank_simulation.c.i
+
+src/water_tank/water_tank_simulation.s: src/water_tank/water_tank_simulation.c.s
+.PHONY : src/water_tank/water_tank_simulation.s
+
+# target to generate assembly for a file
+src/water_tank/water_tank_simulation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.s
+.PHONY : src/water_tank/water_tank_simulation.c.s
 
 # Help Target
 help:
@@ -258,21 +450,45 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyApplication"
+	@echo "... src/central_manager/central_manager.o"
+	@echo "... src/central_manager/central_manager.i"
+	@echo "... src/central_manager/central_manager.s"
+	@echo "... src/central_manager/values_average.o"
+	@echo "... src/central_manager/values_average.i"
+	@echo "... src/central_manager/values_average.s"
 	@echo "... src/control_panel/control_panel_config.o"
 	@echo "... src/control_panel/control_panel_config.i"
 	@echo "... src/control_panel/control_panel_config.s"
+	@echo "... src/control_panel/control_panel_gauge.o"
+	@echo "... src/control_panel/control_panel_gauge.i"
+	@echo "... src/control_panel/control_panel_gauge.s"
 	@echo "... src/control_panel/control_panel_gui.o"
 	@echo "... src/control_panel/control_panel_gui.i"
 	@echo "... src/control_panel/control_panel_gui.s"
+	@echo "... src/control_panel/control_panel_manager.o"
+	@echo "... src/control_panel/control_panel_manager.i"
+	@echo "... src/control_panel/control_panel_manager.s"
+	@echo "... src/fuel_tank/fuel_tank_manager.o"
+	@echo "... src/fuel_tank/fuel_tank_manager.i"
+	@echo "... src/fuel_tank/fuel_tank_manager.s"
+	@echo "... src/fuel_tank/fuel_tank_simulation.o"
+	@echo "... src/fuel_tank/fuel_tank_simulation.i"
+	@echo "... src/fuel_tank/fuel_tank_simulation.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/water_tank/thread_water_level.o"
-	@echo "... src/water_tank/thread_water_level.i"
-	@echo "... src/water_tank/thread_water_level.s"
-	@echo "... src/water_tank/water_valve.o"
-	@echo "... src/water_tank/water_valve.i"
-	@echo "... src/water_tank/water_valve.s"
+	@echo "... src/pipes_manager.o"
+	@echo "... src/pipes_manager.i"
+	@echo "... src/pipes_manager.s"
+	@echo "... src/threads_manager.o"
+	@echo "... src/threads_manager.i"
+	@echo "... src/threads_manager.s"
+	@echo "... src/water_tank/water_tank_manager.o"
+	@echo "... src/water_tank/water_tank_manager.i"
+	@echo "... src/water_tank/water_tank_manager.s"
+	@echo "... src/water_tank/water_tank_simulation.o"
+	@echo "... src/water_tank/water_tank_simulation.i"
+	@echo "... src/water_tank/water_tank_simulation.s"
 .PHONY : help
 
 

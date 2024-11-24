@@ -1,41 +1,38 @@
-#define MAX_VALUES 5  // Le nombre de secondes à prendre en compte
 
-typedef struct {
-    int values[MAX_VALUES];  // Tableau pour stocker les niveaux
-    int count;                     // Compteur pour suivre le nombre de valeurs
-    int index;                     // Indice où la prochaine valeur sera stockée
-} WaterLevelBuffer;
+#include "values_average.h"
 
-#include <stdio.h>
-
-
-void add_value(WaterLevelBuffer *buffer, int new_value) {
-
+void add_value_to_buffer(ValueBuffer *buffer, int new_value, int max_value) {
     // Ajouter la nouvelle valeur dans le buffer
-    buffer->water_levels[buffer->index] = new_value;
+    buffer->values[buffer->index] = new_value;
 
-    // Mettre à jour l'indice (c'est un buffer circulaire)
-    buffer->index = (buffer->index + 1) % MAX_VALUES;
+    // Mettre à jour l'indice (buffer circulaire)
+    buffer->index = (buffer->index + 1) % max_value;
 
     // Si le buffer n'est pas encore plein, augmenter le compteur
-    if (buffer->count < MAX_VALUES) {
+    if (buffer->count < max_value) {
         buffer->count++;
     }
 }
 
-void calculate_average(WaterLevelBuffer *buffer, int new_value) {
-
-    // Calcul de la moyenne des valeurs
+float calculate_average(ValueBuffer *buffer) {
     int sum = 0;
+
+    // Calculer la somme des valeurs dans le buffer
     for (int i = 0; i < buffer->count; i++) {
-        sum += buffer->water_levels[i];
+        sum += buffer->values[i];
     }
 
-    // Calcul de la moyenne
-    float average = (float)sum / buffer->count;
-
-    // Afficher la moyenne
-    printf("Average water level over the last %d seconds: %.2f\n", buffer->count, average);
+    // Calculer la moyenne
+    return (float)sum / buffer->count;
 }
 
-void get_5seconds_average(WaterLevelBuffer *buffer) {}
+void add_values_and_calculate_average(ValueBuffer *buffer, float *values, int max_value, float *average) {
+    // Ajouter chaque valeur dans le buffer
+    for (int i = 0; i < max_value; i++) {
+        add_value_to_buffer(buffer, values[i], max_value);
+    }
+
+    // Calculer la moyenne
+    *average = calculate_average(buffer);
+}
+

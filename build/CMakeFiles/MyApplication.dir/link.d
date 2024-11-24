@@ -3,10 +3,18 @@ MyApplication: \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o \
   CMakeFiles/MyApplication.dir/src/main.c.o \
+  CMakeFiles/MyApplication.dir/src/threads_manager.c.o \
+  CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.o \
+  CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o \
+  CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o \
+  CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.o \
   CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o \
-  CMakeFiles/MyApplication.dir/src/water_tank/thread_water_level.c.o \
-  CMakeFiles/MyApplication.dir/src/water_tank/water_valve.c.o \
   CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o \
+  CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o \
+  CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o \
+  CMakeFiles/MyApplication.dir/src/pipes_manager.c.o \
+  CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o \
+  CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o \
   /usr/lib/x86_64-linux-gnu/libSDL2.so \
   /usr/lib/x86_64-linux-gnu/libSDL2_image.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a \
@@ -211,13 +219,29 @@ MyApplication: \
 
 CMakeFiles/MyApplication.dir/src/main.c.o:
 
+CMakeFiles/MyApplication.dir/src/threads_manager.c.o:
+
+CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.o:
+
+CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o:
+
+CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o:
+
+CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.o:
+
 CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o:
 
-CMakeFiles/MyApplication.dir/src/water_tank/thread_water_level.c.o:
-
-CMakeFiles/MyApplication.dir/src/water_tank/water_valve.c.o:
-
 CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o:
+
+CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o:
+
+CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o:
+
+CMakeFiles/MyApplication.dir/src/pipes_manager.c.o:
+
+CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o:
+
+CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o:
 
 /usr/lib/x86_64-linux-gnu/libSDL2.so:
 

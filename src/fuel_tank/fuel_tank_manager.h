@@ -1,14 +1,14 @@
-#ifndef WATER_TANK_MANAGER_H
-#define WATER_TANK_MANAGER_H
+#ifndef FUEL_TANK_MANAGER_H
+#define FUEL_TANK_MANAGER_H
 
 // Définition de la structure WaterTankManager
 typedef struct {
-    int water_level;         // Niveau actuel de l'eau
+    float fuel_level;         // Niveau actuel de l'eau
     int supply_pipe[2];      // Pipe pour la vanne d'approvisionnement
     int use_pipe[2];         // Pipe pour la vanne de sortie (proportionnelle)
-} WaterTankManager;
+} FuelTankManager;
 
-// Prototypes des fonctions
-void* water_tank_manager(void* arg);
+// Fonction principale du thread
+void* fuel_tank_manager_thread(void* arg);
 
-#endif // WATER_TANK_MANAGER_H
+#endif // FUEL_TANK_MANAGER_H

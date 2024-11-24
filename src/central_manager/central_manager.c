@@ -7,66 +7,63 @@
 
 #include "control_panel_gui.h"
 #include "control_panel_config.h"
+#include "values_average.h"
 
-// Déclaration d'une instance pour l'affichage du panneau de contrôle
-ControlPanelGUI *panel = NULL;  // Initialisé plus tard dans central_manager_init
 
 // Thread de gestion du panneau de contrôle
 void *central_manager_thread(void *arg) {
-    CentralManagerData data = {0};  // Initialisation des données
+
+    CentralManagerData* data = {0};
+    ValueBuffer water_buffer = {{0}, 0, 0};  // Buffer pour les niveaux d'eau
+    ValueBuffer fuel_buffer = {{0}, 0, 0};   // Buffer pour les niveaux de carburant
+
+
+    float water_level = 0.0;
+    float water_average = 0.0;
+    float fuel_level = 0.0;
+    float fuel_average = 0.0;
+
+
 
     while (1) {
-        // Simuler la récupération des données des réservoirs (exemple avec des valeurs statiques)
-        // Dans un cas réel, cela viendrait des réservoirs via un gestionnaire dédié.
-        data.water_level = 75;  // Exemple de niveau d'eau
-        data.fuel_level = 50.0; // Exemple de niveau de carburant
 
-        // Mise à jour du panneau de contrôle avec ces données
-        update_control_panel(&data);
+        water_level = data->water_level;
+        water_average = data->water_average;
+        fuel_level = data->fuel_level;
+        fuel_average = data->fuel_average;
 
+        // Lit le niveau d'eau dans le pipe
+        if (read(data->water_level_pipe[0], &data->water_level, sizeof(&data->water_level)) > 0) {
+            printf("Water level received from simulator: %f\n", data->water_level);
+
+            // Calculer la moyenne des niveaux d'eau
+            if (water_buffer.count == WATER_TIME_INTERVAL) {
+                add_values_and_calculate_average(&water_buffer, &data->water_level, WATER_TIME_INTERVAL, &data->water_average);
+                printf("Water average over the last %d values: %.2f\n", WATER_TIME_INTERVAL, data->water_average);
+            }
+
+            // Envoie au central_manager via son pipe
+            write(data->water_average_pipe[1], &data->water_average, sizeof(data->water_average));
+            printf("Water level send to control panel: %f", data->water_average);
+        }
+
+/*
+        // Lit le niveau de fuel dans le pipe
+        if (read(data->fuel_level_pipe[0], &data->fuel_level, sizeof(&data->fuel_level)) > 0) {
+            printf("Fuel level received from simulator: %f\n", data->fuel_level);
+            if (fuel_buffer.count == FUEL_TIME_INTERVAL) {
+                add_values_and_calculate_average(&fuel_buffer, &data->fuel_level, FUEL_TIME_INTERVAL, &data->fuel_average);
+                printf("Fuel average over the last %d values: %.2f\n", FUEL_TIME_INTERVAL, data->fuel_average);
+            }
+
+            // Envoie au central_manager via son pipe
+            write(data->fuel_average_pipe[1], &data->fuel_average, sizeof(data->fuel_average));
+            printf("Fuel level send to control panel: %f", data->fuel_average);
+
+*/
         // Attendre avant la prochaine mise à jour (ex: 1 seconde)
         sleep(1);
     }
 
     return NULL;
-}
-
-// Fonction d'initialisation du gestionnaire central
-int central_manager_init() {
-    // Initialisation du panneau de contrôle (SDL, textures, etc.)
-    panel = control_panel_gui_init(/* SDL_Renderer *renderer */); // Passer un renderer ici
-    if (!panel) {
-        printf("Erreur lors de l'initialisation du panneau de contrôle\n");
-        return -1;
-    }
-
-    // Créer un thread pour gérer le flux d'informations vers le panneau de contrôle
-    pthread_t thread_id;
-    if (pthread_create(&thread_id, NULL, central_manager_thread, NULL) != 0) {
-        printf("Erreur lors de la création du thread de gestion\n");
-        return -1;
-    }
-
-    return 0;
-}
-
-// Fonction de mise à jour des informations du panneau de contrôle
-void update_control_panel(CentralManagerData *data) {
-    if (panel) {
-        // Exemple d'affichage : la jauge de niveau d'eau
-        // En fait, tu devras lier ces informations aux éléments du GUI, comme la jauge
-        printf("Mise à jour du panneau de contrôle : Niveau d'eau = %d, Niveau de carburant = %.2f\n",
-            data->water_level, data->fuel_level);
-
-        // Appel à une fonction pour mettre à jour la jauge de niveau d'eau ou d'autres éléments
-        // control_panel_gui_update_gauge(panel, data->water_level);
-    }
-}
-
-// Fonction de nettoyage
-void central_manager_cleanup() {
-    if (panel) {
-        control_panel_gui_destroy(panel);
-    }
-    // Nettoyage des autres ressources si nécessaire
 }

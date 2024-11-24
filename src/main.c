@@ -1,39 +1,49 @@
+#include <control_panel_gui.h>
+#include <SDL.h>
+#include <SDL_image.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include <unistd.h>
-#include <assert.h>
-#include "water_tank/thread_water_level.h"
-#include "water_tank/water_valve.h"
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-#include "control_panel/control_panel_gui.h"
-
-
-int pipe_water_level[2]; // Déclaration globale pour utiliser le pipe dans des fichiers externes
-
-extern void *thread_water_level(void *);
-extern void *water_level_sensor_hight(void *);
+#include <unistd.h> // Gestion des pipes
+#include "water_tank/water_tank_manager.h"
+#include "fuel_tank/fuel_tank_manager.h"
+#include "threads_manager.h"
+#include "pipes_manager.h"
 
 int main()
 {
-    pthread_t thread_water_level_id, water_level_sensor_hight_id;
+    printf("let's go !\n");
 
-    // Créer un pipe
-    int result = pipe(pipe_water_level);
-    assert(result == 0); // Vérifier le succès de la création du pipe
 
-    // Créer les threads
-    result = pthread_create(&thread_water_level_id, NULL, thread_water_level, NULL);
-    assert(result == 0); // Vérifier le succès de la création du thread
+    WaterTankSimulator waterSimulation;
+    WaterTankManager waterManager;
+    CentralManagerData centralManager;
+    ControlPanelManager controlPanelManager;
 
-    // result = pthread_create(&water_level_sensor_hight_id, NULL, water_level_sensor_hight, NULL);
-    // assert(result == 0); // Vérifier le succès de la création du thread
+    //Démarrer tous les pipes
+    setup_water_pipes(&waterSimulation, &waterManager, &centralManager, &controlPanelManager);
 
-    // Attendre la fin des threads
-    pthread_join(thread_water_level_id, NULL);
-    // pthread_join(water_level_sensor_hight_id, NULL);
+    ThreadList thread_list;
+    thread_list_init(&thread_list, 10);
 
+    // Ajouter des threads
+    thread_list_add(&thread_list, water_tank_simulation_thread, &waterSimulation);
+    thread_list_add(&thread_list, water_tank_manager_thread, &waterManager);
+    thread_list_add(&thread_list, central_manager_thread, &centralManager);
+    thread_list_add(&thread_list, control_panel_manager_thread, &controlPanelManager);
+
+    // Démarrer tous les threads
+    thread_list_start_all(&thread_list);
+
+    printf("Hello World!\n");
+
+
+    WaterTankManager water_tank;
+    //water_tank.water_level = 50;  // Niveau initial de l'eau
+
+    FuelTankManager fuel_tank;
+    //fuel_tank.fuel_level = 100;  // Niveau initial de carburant
+
+
+    // Gestion de la fenêtre
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         printf("Erreur SDL : %s\n", SDL_GetError());
         return 1;
@@ -77,6 +87,8 @@ int main()
     // Boucle principale
     int running = 1;
     SDL_Event event;
+    char input;
+
     while (running) {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
@@ -87,7 +99,19 @@ int main()
         SDL_RenderClear(renderer);
         control_panel_gui_render(panel); // Afficher les images
         SDL_RenderPresent(renderer);
+
     }
+
+
+
+    // Boucle de simulation simple pour envoyer des commandes aux réservoirs
+    printf("Arrêt du programme...\n");
+
+    // Attendre la fin de tous les threads
+    thread_list_join_all(&thread_list);
+
+    // Nettoyer les ressources
+    thread_list_destroy(&thread_list);
 
     // Nettoyer les ressources
     control_panel_gui_destroy(panel);

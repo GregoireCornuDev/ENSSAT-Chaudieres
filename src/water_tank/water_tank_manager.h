@@ -1,8 +1,17 @@
-//
-// Created by gregoire on 23/11/24.
-//
+#ifndef WATER_TANK_MANAGER_H
+#define WATER_TANK_MANAGER_H
+#include <pthread.h>
 
-#ifndef THREAD_WATER_LEVEL_H
-#define THREAD_WATER_LEVEL_H
+// Définition de la structure WaterTankManager
+typedef struct {
+    int water_sensor_pipe[2]; // Pipe pour le niveau relevé par le capteur (simulateur)
+    int water_level_pipe[2]; // Pipe pour le niveau actuel de l'eau
+    int supply_pipe[2];      // Pipe pour la vanne d'approvisionnement
+    int use_pipe[2];         // Pipe pour la vanne de sortie (proportionnelle)
+    pthread_mutex_t water_level_mutex;
+} WaterTankManager;
 
-#endif //THREAD_WATER_LEVEL_H
+// Fonction principale du thread
+void* water_tank_manager_thread(void* arg);
+
+#endif // WATER_TANK_MANAGER_H

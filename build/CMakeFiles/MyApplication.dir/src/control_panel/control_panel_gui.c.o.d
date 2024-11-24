@@ -192,4 +192,5 @@ CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o: \
  /usr/include/SDL2/SDL_misc.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gui.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_image.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gauge.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_config.h

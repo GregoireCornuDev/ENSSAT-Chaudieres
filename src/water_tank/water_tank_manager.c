@@ -1,55 +1,67 @@
-//
-// Created by Grégoire on 18/11/24.
-//
-#include <stdio.h>
+#include "water_tank_manager.h"
+
 #include <pthread.h>
-#include <stdbool.h>
+#include <stdio.h>
 #include <stdlib.h>
-#include <strings.h>
 #include <unistd.h>
+#include <sys/select.h>
 
+// Fonction principale du thread
+void* water_tank_manager_thread(void* arg) {
 
-void* thread_water_level(void* arg)
-{
-    printf("Starting thread_water_level");
+    WaterTankManager* tank = (WaterTankManager*)arg;
+    char supply_command = '0';  // Vanne d'approvisionnement fermée par défaut
+    float use_command = 0.0;    // Vanne de sortie fermée par défaut (0.0 à 1.0)
+    int water_level = 0;    // Niveau de l'eau
 
-    struct sensor_data *data = (struct sensor_data *)arg;
+    // Initialisation du mutex
+    pthread_mutex_init(&tank->water_level_mutex, NULL);
 
-    char buffer;
-    int pipe_water_level[2];
+    while (1) {
 
+        sleep(30);
 
-
-    while(true)
-    {
-
-        // Attend qu'un octet soit écrit dans le pipe
-        read(pipe_water_level[0], &buffer, 1);
-
-        switch (buffer) {
-        case 'H':
-            printf("HE sensor triggered! Executing...\n");
-
-            // ferme la vanne
-
-            break;
-        case 'B':
-            printf("BE sensor triggered! Executing...\n");
-
-            // ouvre la vanne
-
-            break;
-        case 'b':
-            printf("bE sensor triggered! Executing...\n");
-
-            // ouvre vanne + alerte critique
-
-            break;
-        default:
-            printf("Unknown sensor triggered!\n");
-            break;
+        if (pipe(tank->water_sensor_pipe) == -1) {
+            perror("Erreur lors de la création du pipe");
+            exit(EXIT_FAILURE);
+        }
+        if (pipe(tank->water_level_pipe) == -1) {
+            perror("Erreur lors de la création du pipe");
+            exit(EXIT_FAILURE);
         }
 
-    return NULL;
+        if (tank->water_level_pipe[0] == -1 || tank->water_level_pipe[1] == -1) {
+            perror("Erreur dans les descripteurs de pipe water_level_pipe");
+            exit(EXIT_FAILURE);
+        }
+
+
+
+        if (pthread_mutex_lock(&tank->water_level_mutex) == 0)
+        {
+            printf("water_level_pipe[1]: %d\n", tank->water_level_pipe[1]);
+            if (tank->water_level_pipe[1] == -1) {
+                perror("Invalid write descriptor for water_level_pipe");
+                exit(EXIT_FAILURE);
+            } else {
+                printf("water_level_pipe[1] OK : %d\n", tank->water_level_pipe[1]);
+            }
+
+            pthread_mutex_unlock(&tank->water_level_mutex);
+        } else {
+            perror("Failed to lock mutex");
+        }
+
+        if (read(tank->water_sensor_pipe[0], &water_level, sizeof(water_level)) > 0) {
+            printf("Water level received from simulator: %d\n", water_level);
+            // Envoie au central_manager via son pipe
+            printf("water_level_pipe[1]: %d\n", tank->water_level_pipe[1]);
+            printf("water_level: %d\n", water_level);
+            write(tank->water_level_pipe[1], &water_level, sizeof(water_level));
+        }
+
+        printf("dodo !");
+        // Pause de 1 seconde
+        sleep(1);
     }
 }

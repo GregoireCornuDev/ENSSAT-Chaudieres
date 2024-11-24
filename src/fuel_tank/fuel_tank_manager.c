@@ -1,9 +1,12 @@
-#include "water_tank_manager.h"
+#include "fuel_tank_manager.h"
 #include <stdio.h>
 #include <unistd.h>
+#include <pthread.h>
 
-void* water_tank_manager(void* arg) {
-    WaterTankManager* reservoir = (WaterTankManager*)arg;
+
+// Fonction principale du thread
+void* fuel_tank_manager_thread(void* arg) {
+    FuelTankManager* reservoir = (FuelTankManager*)arg;
     char supply_command = '0';  // Vanne d'approvisionnement fermée par défaut
     float use_command = 0.0;    // Vanne de sortie fermée par défaut (0.0 à 1.0)
 
@@ -26,19 +29,19 @@ void* water_tank_manager(void* arg) {
 
         // Mise à jour du niveau d'eau en fonction des commandes des vannes
         if (supply_command == '1') {
-            reservoir->water_level += 1;  // Vanne d'approvisionnement
+            reservoir->fuel_level += 1;  // Vanne d'approvisionnement
         }
 
         // La vanne de sortie proportionnelle (0.0 à 1.0)
-        reservoir->water_level -= 2 * use_command;  // Vanne de sortie
+        reservoir->fuel_level -= 2 * use_command;  // Vanne de sortie
 
         // Vérifier que le niveau d'eau reste dans des limites réalistes
-        if (reservoir->water_level < 0) {
-            reservoir->water_level = 0;  // Le réservoir ne peut pas être vide
+        if (reservoir->fuel_level < 0) {
+            reservoir->fuel_level = 0;  // Le réservoir ne peut pas être vide
         }
 
         // Affichage du niveau d'eau
-        printf("Current water level: %d\n", reservoir->water_level);
+        //printf("Current fuel level: %d\n", reservoir->fuel_level);
 
         // Pause de 1 seconde
         sleep(1);

@@ -9,8 +9,19 @@ typedef struct {
     SDL_Rect rect;         // Position et taille (x, y, w, h)
 } ImageConfig;
 
-// Liste de configuration des images
+// Structure représentant la configuration de la jauge
+typedef struct {
+    int x, y;               // Position de la jauge (coin supérieur gauche)
+    int width, height;      // Dimensions de la jauge
+    SDL_Color foreground;   // Couleur de la jauge (valeur)
+    SDL_Color background;   // Couleur de l'arrière-plan de la jauge
+} GaugeConfig;
+
+// Déclaration de la configuration des images
 extern const ImageConfig control_panel_images[];
 extern const int control_panel_image_count;
+
+// Déclaration de la configuration de la jauge
+extern const GaugeConfig control_panel_gauge_config;
 
 #endif

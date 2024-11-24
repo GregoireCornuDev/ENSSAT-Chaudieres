@@ -1,10 +1,19 @@
 # ninja log v6
-14	291	1732367399327911569	CMakeFiles/MyApplication.dir/src/water_tank/thread_water_level.c.o	33a415ea7e3bdc93
-12	911	1732367399325911557	CMakeFiles/MyApplication.dir/src/main.c.o	9c19f4603fe2f210
-915	1226	1732367400228916736	MyApplication	f5a8158c156cfefb
+3	463	1732425618481853799	CMakeFiles/MyApplication.dir/src/main.c.o	9c19f4603fe2f210
+3	44	1732421878937527287	CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o	d2263f440dc01ac5
+48	749	1732419802002893011	CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o	d7104c8db079bddf
+3	477	1732425258099438504	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o	7d268d589613e3d8
 14	292	1732367399327911569	CMakeFiles/MyApplication.dir/src/water_tank/water_valve.c.o	f87b54676a023ba8
-13	915	1732367399326911563	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o	aba9c379e22e1e38
-2	486	1732370112534916467	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o	aba9c379e22e1e38
-3	495	1732370112534916467	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o	e7174a88afa55f4d
-2	556	1732370112533916435	CMakeFiles/MyApplication.dir/src/main.c.o	9c19f4603fe2f210
-556	682	1732370113087934034	MyApplication	7b312a030c151ec
+4	474	1732423410453996787	CMakeFiles/MyApplication.dir/src/pipes_manager.c.o	cd5e6204b1315f8e
+4	709	1732419801958892809	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o	da1186b7d7a34fba
+55	75	1732416692743315008	CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o	ceba1a9808e338b3
+3	54	1732419801957892804	CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.o	d9b9716c17123cfd
+2	65	1732425745260414593	CMakeFiles/MyApplication.dir/src/threads_manager.c.o	f7cd8bd76e327d9a
+66	186	1732425745324414882	MyApplication	ce63bfe051c8b535
+2	46	1732424561539975873	CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.o	c6caae272f79735c
+3	674	1732419801957892804	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o	aba9c379e22e1e38
+4	47	1732423410453996787	CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o	904f1454921a28e
+14	291	1732367399327911569	CMakeFiles/MyApplication.dir/src/water_tank/thread_water_level.c.o	33a415ea7e3bdc93
+3	485	1732402973342420821	CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o	e7174a88afa55f4d
+3	57	1732425829555799746	CMakeFiles/MyApplication.dir/src/threads_manager.c.o	f7cd8bd76e327d9a
+57	181	1732425829609799995	MyApplication	ce63bfe051c8b535

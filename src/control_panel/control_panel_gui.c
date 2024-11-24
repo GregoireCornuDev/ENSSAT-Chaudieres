@@ -4,7 +4,6 @@
 #include "control_panel_gui.h"
 #include "control_panel_config.h"
 
-
 // Fonction pour charger une texture à partir d'un chemin
 static SDL_Texture *load_texture(SDL_Renderer *renderer, const char *file_path) {
     SDL_Texture *texture = IMG_LoadTexture(renderer, file_path);
@@ -15,7 +14,6 @@ static SDL_Texture *load_texture(SDL_Renderer *renderer, const char *file_path) 
     return texture;
 }
 
-
 // Initialisation du panneau de contrôle
 ControlPanelGUI *control_panel_gui_init(SDL_Renderer *renderer) {
     ControlPanelGUI *panel = malloc(sizeof(ControlPanelGUI));
@@ -24,7 +22,7 @@ ControlPanelGUI *control_panel_gui_init(SDL_Renderer *renderer) {
         return NULL;
     }
 
-    panel->renderer = renderer;
+    panel->renderer = renderer;  // Le renderer est directement passé ici
     panel->texture_count = control_panel_image_count;
     panel->textures = malloc(panel->texture_count * sizeof(SDL_Texture *));
 
@@ -42,6 +40,11 @@ ControlPanelGUI *control_panel_gui_init(SDL_Renderer *renderer) {
         }
     }
 
+    // Initialiser la jauge
+    SDL_Color fg = {0, 255, 0, 255}; // Vert
+    SDL_Color bg = {50, 50, 50, 255}; // Gris
+    panel->gauge = create_gauge(50, 100, 30, 200, fg, bg);
+
     return panel;
 }
 
@@ -51,6 +54,17 @@ void control_panel_gui_render(ControlPanelGUI *panel) {
 
     for (int i = 0; i < panel->texture_count; ++i) {
         SDL_RenderCopy(panel->renderer, panel->textures[i], NULL, &control_panel_images[i].rect);
+    }
+
+    // Dessiner la jauge
+    render_gauge(panel->renderer, &panel->gauge);
+}
+
+// Mettre à jour la jauge avec la nouvelle valeur
+void update_control_panel(ControlPanelGUI* gui, ControlPanelData* data) {
+    if (gui) {
+        gui->gauge.value = data->water_average;  // Mettez à jour la jauge avec la moyenne de l'eau
+        control_panel_gui_render(gui);  // Re-render le panneau avec les nouvelles données
     }
 }
 

@@ -10,13 +10,23 @@ find_package(SDL2_image REQUIRED)
 # Ajouter tous les fichiers source
 set(SOURCES
         src/main.c
+        src/threads_manager.c
+        src/water_tank/water_tank_manager.c
+        src/water_tank/water_tank_simulation.c
+        src/fuel_tank/fuel_tank_manager.c
+        src/fuel_tank/fuel_tank_simulation.c
         src/control_panel/control_panel_gui.c
-        src/water_tank/thread_water_level.c
-        src/water_tank/water_valve.c
-        src/control_panel/control_panel_gui.h
-        src/control_panel/control_panel_gui.c
-        src/control_panel/control_panel_config.h
         src/control_panel/control_panel_config.c
+        src/control_panel/control_panel_gauge.c
+        src/central_manager/central_manager.h
+        src/central_manager/central_manager.c
+        src/pipes_manager.c
+        src/pipes_manager.h
+        src/central_manager/values_average.h
+        src/central_manager/values_average.c
+        src/control_panel/control_panel_manager.c
+        src/control_panel/control_panel_manager.h
+
 )
 
 # Créer l'exécutable
