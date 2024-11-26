@@ -225,30 +225,6 @@ src/control_panel/control_panel_config.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.s
 .PHONY : src/control_panel/control_panel_config.c.s
 
-src/control_panel/control_panel_gauge.o: src/control_panel/control_panel_gauge.c.o
-.PHONY : src/control_panel/control_panel_gauge.o
-
-# target to build an object file
-src/control_panel/control_panel_gauge.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o
-.PHONY : src/control_panel/control_panel_gauge.c.o
-
-src/control_panel/control_panel_gauge.i: src/control_panel/control_panel_gauge.c.i
-.PHONY : src/control_panel/control_panel_gauge.i
-
-# target to preprocess a source file
-src/control_panel/control_panel_gauge.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.i
-.PHONY : src/control_panel/control_panel_gauge.c.i
-
-src/control_panel/control_panel_gauge.s: src/control_panel/control_panel_gauge.c.s
-.PHONY : src/control_panel/control_panel_gauge.s
-
-# target to generate assembly for a file
-src/control_panel/control_panel_gauge.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.s
-.PHONY : src/control_panel/control_panel_gauge.c.s
-
 src/control_panel/control_panel_gui.o: src/control_panel/control_panel_gui.c.o
 .PHONY : src/control_panel/control_panel_gui.o
 
@@ -296,6 +272,54 @@ src/control_panel/control_panel_manager.s: src/control_panel/control_panel_manag
 src/control_panel/control_panel_manager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.s
 .PHONY : src/control_panel/control_panel_manager.c.s
+
+src/control_panel/gauge.o: src/control_panel/gauge.c.o
+.PHONY : src/control_panel/gauge.o
+
+# target to build an object file
+src/control_panel/gauge.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.o
+.PHONY : src/control_panel/gauge.c.o
+
+src/control_panel/gauge.i: src/control_panel/gauge.c.i
+.PHONY : src/control_panel/gauge.i
+
+# target to preprocess a source file
+src/control_panel/gauge.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.i
+.PHONY : src/control_panel/gauge.c.i
+
+src/control_panel/gauge.s: src/control_panel/gauge.c.s
+.PHONY : src/control_panel/gauge.s
+
+# target to generate assembly for a file
+src/control_panel/gauge.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.s
+.PHONY : src/control_panel/gauge.c.s
+
+src/control_panel/indicator.o: src/control_panel/indicator.c.o
+.PHONY : src/control_panel/indicator.o
+
+# target to build an object file
+src/control_panel/indicator.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.o
+.PHONY : src/control_panel/indicator.c.o
+
+src/control_panel/indicator.i: src/control_panel/indicator.c.i
+.PHONY : src/control_panel/indicator.i
+
+# target to preprocess a source file
+src/control_panel/indicator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.i
+.PHONY : src/control_panel/indicator.c.i
+
+src/control_panel/indicator.s: src/control_panel/indicator.c.s
+.PHONY : src/control_panel/indicator.s
+
+# target to generate assembly for a file
+src/control_panel/indicator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.s
+.PHONY : src/control_panel/indicator.c.s
 
 src/fuel_tank/fuel_tank_manager.o: src/fuel_tank/fuel_tank_manager.c.o
 .PHONY : src/fuel_tank/fuel_tank_manager.o
@@ -534,15 +558,18 @@ help:
 	@echo "... src/control_panel/control_panel_config.o"
 	@echo "... src/control_panel/control_panel_config.i"
 	@echo "... src/control_panel/control_panel_config.s"
-	@echo "... src/control_panel/control_panel_gauge.o"
-	@echo "... src/control_panel/control_panel_gauge.i"
-	@echo "... src/control_panel/control_panel_gauge.s"
 	@echo "... src/control_panel/control_panel_gui.o"
 	@echo "... src/control_panel/control_panel_gui.i"
 	@echo "... src/control_panel/control_panel_gui.s"
 	@echo "... src/control_panel/control_panel_manager.o"
 	@echo "... src/control_panel/control_panel_manager.i"
 	@echo "... src/control_panel/control_panel_manager.s"
+	@echo "... src/control_panel/gauge.o"
+	@echo "... src/control_panel/gauge.i"
+	@echo "... src/control_panel/gauge.s"
+	@echo "... src/control_panel/indicator.o"
+	@echo "... src/control_panel/indicator.i"
+	@echo "... src/control_panel/indicator.s"
 	@echo "... src/fuel_tank/fuel_tank_manager.o"
 	@echo "... src/fuel_tank/fuel_tank_manager.i"
 	@echo "... src/fuel_tank/fuel_tank_manager.s"

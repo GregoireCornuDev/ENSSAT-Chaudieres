@@ -212,7 +212,9 @@ CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gauge.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gauge.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/indicator.h \
+ /usr/include/SDL2/SDL.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_config.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/circulare_buffer.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/../config.h \

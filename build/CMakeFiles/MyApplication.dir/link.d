@@ -10,7 +10,7 @@ MyApplication: \
   CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.o \
   CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o \
   CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o \
-  CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o \
+  CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.o \
   CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o \
   CMakeFiles/MyApplication.dir/src/pipes_manager.c.o \
   CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o \
@@ -18,8 +18,10 @@ MyApplication: \
   CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o \
   CMakeFiles/MyApplication.dir/src/config.c.o \
   CMakeFiles/MyApplication.dir/src/mutex_manager.c.o \
+  CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.o \
   /usr/lib/x86_64-linux-gnu/libSDL2.so \
   /usr/lib/x86_64-linux-gnu/libSDL2_image.so \
+  /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc_s.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/libgcc_s.so \
@@ -107,6 +109,12 @@ MyApplication: \
   /lib/i386-linux-gnu/libwebp.so.7 \
   /usr/lib/i386-linux-gnu/libwebp.so.7 \
   /lib/x86_64-linux-gnu/libwebp.so.7 \
+  /lib/i386-linux-gnu/libfreetype.so.6 \
+  /usr/lib/i386-linux-gnu/libfreetype.so.6 \
+  /lib/x86_64-linux-gnu/libfreetype.so.6 \
+  /lib/i386-linux-gnu/libharfbuzz.so.0 \
+  /usr/lib/i386-linux-gnu/libharfbuzz.so.0 \
+  /lib/x86_64-linux-gnu/libharfbuzz.so.0 \
   /lib64/ld-linux-x86-64.so.2 \
   /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-16.1.so \
   /lib/i386-linux-gnu/libdbus-1.so.3 \
@@ -149,6 +157,18 @@ MyApplication: \
   /lib/i386-linux-gnu/libsharpyuv.so.0 \
   /usr/lib/i386-linux-gnu/libsharpyuv.so.0 \
   /lib/x86_64-linux-gnu/libsharpyuv.so.0 \
+  /lib/i386-linux-gnu/libbz2.so.1.0 \
+  /usr/lib/i386-linux-gnu/libbz2.so.1.0 \
+  /lib/x86_64-linux-gnu/libbz2.so.1.0 \
+  /lib/i386-linux-gnu/libbrotlidec.so.1 \
+  /usr/lib/i386-linux-gnu/libbrotlidec.so.1 \
+  /lib/x86_64-linux-gnu/libbrotlidec.so.1 \
+  /lib/i386-linux-gnu/libglib-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libglib-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libglib-2.0.so.0 \
+  /lib/i386-linux-gnu/libgraphite2.so.3 \
+  /usr/lib/i386-linux-gnu/libgraphite2.so.3 \
+  /lib/x86_64-linux-gnu/libgraphite2.so.3 \
   /lib/i386-linux-gnu/libsndfile.so.1 \
   /usr/lib/i386-linux-gnu/libsndfile.so.1 \
   /lib/x86_64-linux-gnu/libsndfile.so.1 \
@@ -174,6 +194,12 @@ MyApplication: \
   /usr/lib/i386-linux-gnu/libstdc++.so.6 \
   /lib/x86_64-linux-gnu/libstdc++.so.6 \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libgcc_s.so.1 \
+  /lib/i386-linux-gnu/libbrotlicommon.so.1 \
+  /usr/lib/i386-linux-gnu/libbrotlicommon.so.1 \
+  /lib/x86_64-linux-gnu/libbrotlicommon.so.1 \
+  /lib/i386-linux-gnu/libpcre2-8.so.0 \
+  /usr/lib/i386-linux-gnu/libpcre2-8.so.0 \
+  /lib/x86_64-linux-gnu/libpcre2-8.so.0 \
   /lib/i386-linux-gnu/libFLAC.so.12 \
   /usr/lib/i386-linux-gnu/libFLAC.so.12 \
   /lib/x86_64-linux-gnu/libFLAC.so.12 \
@@ -236,7 +262,7 @@ CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o:
 
 CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o:
 
-CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o:
+CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.o:
 
 CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o:
 
@@ -252,9 +278,13 @@ CMakeFiles/MyApplication.dir/src/config.c.o:
 
 CMakeFiles/MyApplication.dir/src/mutex_manager.c.o:
 
+CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.o:
+
 /usr/lib/x86_64-linux-gnu/libSDL2.so:
 
 /usr/lib/x86_64-linux-gnu/libSDL2_image.so:
+
+/usr/lib/x86_64-linux-gnu/libSDL2_ttf.so:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/libgcc.a:
 
@@ -430,6 +460,18 @@ CMakeFiles/MyApplication.dir/src/mutex_manager.c.o:
 
 /lib/x86_64-linux-gnu/libwebp.so.7:
 
+/lib/i386-linux-gnu/libfreetype.so.6:
+
+/usr/lib/i386-linux-gnu/libfreetype.so.6:
+
+/lib/x86_64-linux-gnu/libfreetype.so.6:
+
+/lib/i386-linux-gnu/libharfbuzz.so.0:
+
+/usr/lib/i386-linux-gnu/libharfbuzz.so.0:
+
+/lib/x86_64-linux-gnu/libharfbuzz.so.0:
+
 /lib64/ld-linux-x86-64.so.2:
 
 /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-16.1.so:
@@ -514,6 +556,30 @@ CMakeFiles/MyApplication.dir/src/mutex_manager.c.o:
 
 /lib/x86_64-linux-gnu/libsharpyuv.so.0:
 
+/lib/i386-linux-gnu/libbz2.so.1.0:
+
+/usr/lib/i386-linux-gnu/libbz2.so.1.0:
+
+/lib/x86_64-linux-gnu/libbz2.so.1.0:
+
+/lib/i386-linux-gnu/libbrotlidec.so.1:
+
+/usr/lib/i386-linux-gnu/libbrotlidec.so.1:
+
+/lib/x86_64-linux-gnu/libbrotlidec.so.1:
+
+/lib/i386-linux-gnu/libglib-2.0.so.0:
+
+/usr/lib/i386-linux-gnu/libglib-2.0.so.0:
+
+/lib/x86_64-linux-gnu/libglib-2.0.so.0:
+
+/lib/i386-linux-gnu/libgraphite2.so.3:
+
+/usr/lib/i386-linux-gnu/libgraphite2.so.3:
+
+/lib/x86_64-linux-gnu/libgraphite2.so.3:
+
 /lib/i386-linux-gnu/libsndfile.so.1:
 
 /usr/lib/i386-linux-gnu/libsndfile.so.1:
@@ -563,6 +629,18 @@ CMakeFiles/MyApplication.dir/src/mutex_manager.c.o:
 /lib/x86_64-linux-gnu/libstdc++.so.6:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libgcc_s.so.1:
+
+/lib/i386-linux-gnu/libbrotlicommon.so.1:
+
+/usr/lib/i386-linux-gnu/libbrotlicommon.so.1:
+
+/lib/x86_64-linux-gnu/libbrotlicommon.so.1:
+
+/lib/i386-linux-gnu/libpcre2-8.so.0:
+
+/usr/lib/i386-linux-gnu/libpcre2-8.so.0:
+
+/lib/x86_64-linux-gnu/libpcre2-8.so.0:
 
 /lib/i386-linux-gnu/libFLAC.so.12:
 

@@ -194,8 +194,10 @@ CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o: \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gui.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
  /usr/include/SDL2/SDL.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gauge.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gauge.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/indicator.h \
+ /usr/include/SDL2/SDL.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \

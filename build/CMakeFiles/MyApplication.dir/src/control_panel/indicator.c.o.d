@@ -1,8 +1,6 @@
-CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o: \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.c \
- /usr/include/stdc-predef.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gui.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
+CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.o: \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/indicator.c \
+ /usr/include/stdc-predef.h /usr/include/SDL2/SDL_ttf.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -190,15 +188,23 @@ CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gauge.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/indicator.h \
  /usr/include/SDL2/SDL.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
- /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_config.h \
+ /usr/include/SDL2/SDL.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/../config.h
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/../config.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h

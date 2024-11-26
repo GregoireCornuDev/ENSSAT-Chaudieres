@@ -20,6 +20,6 @@ Gauge *gauge_init(int x, int y, int width, int height, SDL_Color fg, SDL_Color b
 void render_gauge(SDL_Renderer* renderer, Gauge* gauge);
 
 // Met à jour la jauge
-void update_gauge(Gauge* gauge, float new_value);
+void gauge_update(Gauge* gauge, float new_value);
 
 #endif // CONTROL_PANEL_GAUGE_H

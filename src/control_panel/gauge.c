@@ -29,7 +29,7 @@ void render_gauge(SDL_Renderer* renderer, Gauge* gauge) {
 }
 
 
-void update_gauge(Gauge* gauge, float new_value) {
+void gauge_update(Gauge* gauge, float new_value) {
     if (!gauge) return;
 
     printf("Gauge value: %f\n", new_value);
