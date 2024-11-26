@@ -1,27 +1,44 @@
 #include "water_tank_simulation.h"
 #include <stdio.h>
 #include <unistd.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
-void* water_tank_simulation_thread(void* arg) {
-    WaterTankSimulator* tank = (WaterTankSimulator*)arg;
+#include "../config.h"
+#include "../mutex_manager.h"
+
+void *water_tank_simulation_thread(void* arg) {
+
+    printf("Water Tank Simulation thread started \n");
+
+    WaterTankSimulation *simulator = (void*)arg;//water_tank_simulation_init();
+
     char supply_command, drain_command;
 
-    init_water_tank(tank);
+    // Initialisation du réservoir
+    init_water_tank(simulator);
 
+    float water_level = 0.0;
 
-
-    float water_level = 40.0;
-
-
-    int i;
-    while(1)
-    {
-        // Rien
-        i = 0;
+    if(DEBUG == true) {
+        // Boucle blanche
+        int i;
+        while(1) {
+            i = 0;
+            sleep(1);
+        }
     }
 
 
     while (1) {
+
+        // Pause de 1 seconde
+        sleep(1);
+
+        if (water_level <= 100) {
+            water_level += 1;
+        }
+
         /*
         // Lecture des commandes pour la vanne d'approvisionnement
         if (read(tank->supply_pipe[0], &supply_command, 1) > 0) {
@@ -49,27 +66,29 @@ void* water_tank_simulation_thread(void* arg) {
             tank->water_level -= 2;
         }
         */
-        if (water_level <= 100) {
-            //water_level += 1;
-        }
 
-        printf("water level: %f\n", water_level);
+        // Affichage du niveau d'eau enregistré
+        printf("Simulation water level: %f \n", water_level);
 
-        // Affichage du niveau d'eau
-        printf("Current water level: %d\n", tank->water_level);
-
+        //pthread_mutex_lock(&water_level_sensor_mutex);
         // Envoyer la nouvelle valeur de water_level à travers le pipe
-        if (write(tank->water_sensor_pipe[1], &tank->water_level, sizeof(tank->water_level)) == -1) {
-            perror("Error writing to water_level_pipe");
+        if (write(simulator->water_level_sensor_pipe[1], &water_level, sizeof(water_level)) == -1) {
+            perror("Erreur d'écriture dans simulator->water_level_sensor_pipe \n");
         }
+        //pthread_mutex_unlock(&water_level_sensor_mutex);
 
-        // Pause de 1 seconde
-        sleep(1);
+
+
     }
 
     return NULL;
 }
 
-void init_water_tank(WaterTankSimulator* tank) {
+WaterTankSimulation *water_tank_simulation_init() {
+    WaterTankSimulation *simulation = (WaterTankSimulation*)malloc(sizeof(WaterTankSimulation));
+    return simulation;
+}
+
+void init_water_tank(WaterTankSimulation* tank) {
     tank->water_level = 40;
 }

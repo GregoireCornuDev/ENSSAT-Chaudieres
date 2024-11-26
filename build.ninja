@@ -126,8 +126,8 @@ build CMakeFiles/MyApplication.dir/src/pipes_manager.c.o: C_COMPILER__MyApplicat
   OBJECT_DIR = CMakeFiles/MyApplication.dir
   OBJECT_FILE_DIR = CMakeFiles/MyApplication.dir/src
 
-build CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o: C_COMPILER__MyApplication_unscanned_Debug /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/values_average.c || cmake_object_order_depends_target_MyApplication
-  DEP_FILE = CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o.d
+build CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o: C_COMPILER__MyApplication_unscanned_Debug /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/circulare_buffer.c || cmake_object_order_depends_target_MyApplication
+  DEP_FILE = CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o.d
   FLAGS = -g -fPIE -fdiagnostics-color=always
   INCLUDES = -I/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel -I/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank -isystem /usr/include/SDL2
   OBJECT_DIR = CMakeFiles/MyApplication.dir
@@ -147,6 +147,20 @@ build CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o: C_COMPILER__MyAppl
   OBJECT_DIR = CMakeFiles/MyApplication.dir
   OBJECT_FILE_DIR = CMakeFiles/MyApplication.dir/src/tests
 
+build CMakeFiles/MyApplication.dir/src/config.c.o: C_COMPILER__MyApplication_unscanned_Debug /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/config.c || cmake_object_order_depends_target_MyApplication
+  DEP_FILE = CMakeFiles/MyApplication.dir/src/config.c.o.d
+  FLAGS = -g -fPIE -fdiagnostics-color=always
+  INCLUDES = -I/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel -I/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank -isystem /usr/include/SDL2
+  OBJECT_DIR = CMakeFiles/MyApplication.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyApplication.dir/src
+
+build CMakeFiles/MyApplication.dir/src/mutex_manager.c.o: C_COMPILER__MyApplication_unscanned_Debug /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/mutex_manager.c || cmake_object_order_depends_target_MyApplication
+  DEP_FILE = CMakeFiles/MyApplication.dir/src/mutex_manager.c.o.d
+  FLAGS = -g -fPIE -fdiagnostics-color=always
+  INCLUDES = -I/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel -I/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank -isystem /usr/include/SDL2
+  OBJECT_DIR = CMakeFiles/MyApplication.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyApplication.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MyApplication
@@ -155,7 +169,7 @@ build CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o: C_COMPILER__MyAppl
 #############################################
 # Link the executable MyApplication
 
-build MyApplication: C_EXECUTABLE_LINKER__MyApplication_Debug CMakeFiles/MyApplication.dir/src/main.c.o CMakeFiles/MyApplication.dir/src/threads_manager.c.o CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.o CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.o CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o CMakeFiles/MyApplication.dir/src/pipes_manager.c.o CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o | /usr/lib/x86_64-linux-gnu/libSDL2.so /usr/lib/x86_64-linux-gnu/libSDL2_image.so
+build MyApplication: C_EXECUTABLE_LINKER__MyApplication_Debug CMakeFiles/MyApplication.dir/src/main.c.o CMakeFiles/MyApplication.dir/src/threads_manager.c.o CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.o CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.o CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o CMakeFiles/MyApplication.dir/src/pipes_manager.c.o CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o CMakeFiles/MyApplication.dir/src/config.c.o CMakeFiles/MyApplication.dir/src/mutex_manager.c.o | /usr/lib/x86_64-linux-gnu/libSDL2.so /usr/lib/x86_64-linux-gnu/libSDL2_image.so
   DEP_FILE = CMakeFiles/MyApplication.dir/link.d
   FLAGS = -g
   LINK_FLAGS = -Wl,--dependency-file,CMakeFiles/MyApplication.dir/link.d

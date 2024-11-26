@@ -20,9 +20,11 @@ set(SOURCES
         src/control_panel/control_panel_gauge.c
         src/central_manager/central_manager.c
         src/pipes_manager.c
-        src/central_manager/values_average.c
+        src/central_manager/circulare_buffer.c
         src/control_panel/control_panel_manager.c
         src/tests/tests_pipes.c
+        src/config.c
+        src/mutex_manager.c
 )
 
 # Créer l'exécutable

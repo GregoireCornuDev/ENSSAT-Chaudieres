@@ -14,7 +14,7 @@ typedef struct {
 } Gauge;
 
 // Initialise une jauge
-Gauge create_gauge(int x, int y, int width, int height, SDL_Color fg, SDL_Color bg);
+Gauge *gauge_init(int x, int y, int width, int height, SDL_Color fg, SDL_Color bg);
 
 // Dessine la jauge dans le renderer SDL
 void render_gauge(SDL_Renderer* renderer, Gauge* gauge);

@@ -69,8 +69,9 @@ CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o: \
  /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/string.h /usr/include/strings.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../pipes_manager.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/control_panel_manager.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/control_panel_gui.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gui.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -207,9 +208,8 @@ CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o: \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h /usr/include/SDL2/SDL_image.h \
- /usr/include/SDL2/SDL.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gauge.h \
+ /usr/include/SDL2/SDL_misc.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/control_panel_gauge.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_simulation.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_manager.h \
@@ -217,6 +217,7 @@ CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o: \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../water_tank/water_tank_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../central_manager/central_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/control_panel_manager.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/control_panel_gui.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/tests_pipes.h \
  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \

@@ -153,29 +153,53 @@ src/central_manager/central_manager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.s
 .PHONY : src/central_manager/central_manager.c.s
 
-src/central_manager/values_average.o: src/central_manager/values_average.c.o
-.PHONY : src/central_manager/values_average.o
+src/central_manager/circulare_buffer.o: src/central_manager/circulare_buffer.c.o
+.PHONY : src/central_manager/circulare_buffer.o
 
 # target to build an object file
-src/central_manager/values_average.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o
-.PHONY : src/central_manager/values_average.c.o
+src/central_manager/circulare_buffer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o
+.PHONY : src/central_manager/circulare_buffer.c.o
 
-src/central_manager/values_average.i: src/central_manager/values_average.c.i
-.PHONY : src/central_manager/values_average.i
+src/central_manager/circulare_buffer.i: src/central_manager/circulare_buffer.c.i
+.PHONY : src/central_manager/circulare_buffer.i
 
 # target to preprocess a source file
-src/central_manager/values_average.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.i
-.PHONY : src/central_manager/values_average.c.i
+src/central_manager/circulare_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.i
+.PHONY : src/central_manager/circulare_buffer.c.i
 
-src/central_manager/values_average.s: src/central_manager/values_average.c.s
-.PHONY : src/central_manager/values_average.s
+src/central_manager/circulare_buffer.s: src/central_manager/circulare_buffer.c.s
+.PHONY : src/central_manager/circulare_buffer.s
 
 # target to generate assembly for a file
-src/central_manager/values_average.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.s
-.PHONY : src/central_manager/values_average.c.s
+src/central_manager/circulare_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.s
+.PHONY : src/central_manager/circulare_buffer.c.s
+
+src/config.o: src/config.c.o
+.PHONY : src/config.o
+
+# target to build an object file
+src/config.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/config.c.o
+.PHONY : src/config.c.o
+
+src/config.i: src/config.c.i
+.PHONY : src/config.i
+
+# target to preprocess a source file
+src/config.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/config.c.i
+.PHONY : src/config.c.i
+
+src/config.s: src/config.c.s
+.PHONY : src/config.s
+
+# target to generate assembly for a file
+src/config.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/config.c.s
+.PHONY : src/config.c.s
 
 src/control_panel/control_panel_config.o: src/control_panel/control_panel_config.c.o
 .PHONY : src/control_panel/control_panel_config.o
@@ -345,6 +369,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/mutex_manager.o: src/mutex_manager.c.o
+.PHONY : src/mutex_manager.o
+
+# target to build an object file
+src/mutex_manager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/mutex_manager.c.o
+.PHONY : src/mutex_manager.c.o
+
+src/mutex_manager.i: src/mutex_manager.c.i
+.PHONY : src/mutex_manager.i
+
+# target to preprocess a source file
+src/mutex_manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/mutex_manager.c.i
+.PHONY : src/mutex_manager.c.i
+
+src/mutex_manager.s: src/mutex_manager.c.s
+.PHONY : src/mutex_manager.s
+
+# target to generate assembly for a file
+src/mutex_manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/mutex_manager.c.s
+.PHONY : src/mutex_manager.c.s
+
 src/pipes_manager.o: src/pipes_manager.c.o
 .PHONY : src/pipes_manager.o
 
@@ -477,9 +525,12 @@ help:
 	@echo "... src/central_manager/central_manager.o"
 	@echo "... src/central_manager/central_manager.i"
 	@echo "... src/central_manager/central_manager.s"
-	@echo "... src/central_manager/values_average.o"
-	@echo "... src/central_manager/values_average.i"
-	@echo "... src/central_manager/values_average.s"
+	@echo "... src/central_manager/circulare_buffer.o"
+	@echo "... src/central_manager/circulare_buffer.i"
+	@echo "... src/central_manager/circulare_buffer.s"
+	@echo "... src/config.o"
+	@echo "... src/config.i"
+	@echo "... src/config.s"
 	@echo "... src/control_panel/control_panel_config.o"
 	@echo "... src/control_panel/control_panel_config.i"
 	@echo "... src/control_panel/control_panel_config.s"
@@ -501,6 +552,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mutex_manager.o"
+	@echo "... src/mutex_manager.i"
+	@echo "... src/mutex_manager.s"
 	@echo "... src/pipes_manager.o"
 	@echo "... src/pipes_manager.i"
 	@echo "... src/pipes_manager.s"

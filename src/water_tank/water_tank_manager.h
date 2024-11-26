@@ -4,7 +4,7 @@
 
 // Définition de la structure WaterTankManager
 typedef struct {
-    int water_sensor_pipe[2]; // Pipe pour le niveau relevé par le capteur (simulateur)
+    int water_level_sensor_pipe[2]; // Pipe pour le niveau relevé par le capteur (simulateur)
     int water_level_pipe[2]; // Pipe pour le niveau actuel de l'eau
     int supply_pipe[2];      // Pipe pour la vanne d'approvisionnement
     int use_pipe[2];         // Pipe pour la vanne de sortie (proportionnelle)
@@ -12,6 +12,8 @@ typedef struct {
 } WaterTankManager;
 
 // Fonction principale du thread
-void* water_tank_manager_thread(void* arg);
+void *water_tank_manager_thread(void* arg);
+
+WaterTankManager *water_tank_manager_init();
 
 #endif // WATER_TANK_MANAGER_H

@@ -226,19 +226,19 @@ CMakeFiles/MyApplication.dir/src/pipes_manager.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyApplication.dir/src/pipes_manager.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/pipes_manager.c -o CMakeFiles/MyApplication.dir/src/pipes_manager.c.s
 
-CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o: CMakeFiles/MyApplication.dir/flags.make
-CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o: /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/values_average.c
-CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o: CMakeFiles/MyApplication.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o -MF CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o.d -o CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o -c /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/values_average.c
+CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o: CMakeFiles/MyApplication.dir/flags.make
+CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o: /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/circulare_buffer.c
+CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o: CMakeFiles/MyApplication.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o -MF CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o.d -o CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o -c /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/circulare_buffer.c
 
-CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/values_average.c > CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.i
+CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/circulare_buffer.c > CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.i
 
-CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/values_average.c -o CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.s
+CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/circulare_buffer.c -o CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.s
 
 CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o: CMakeFiles/MyApplication.dir/flags.make
 CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o: /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.c
@@ -268,6 +268,34 @@ CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/tests_pipes.c -o CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.s
 
+CMakeFiles/MyApplication.dir/src/config.c.o: CMakeFiles/MyApplication.dir/flags.make
+CMakeFiles/MyApplication.dir/src/config.c.o: /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/config.c
+CMakeFiles/MyApplication.dir/src/config.c.o: CMakeFiles/MyApplication.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/MyApplication.dir/src/config.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyApplication.dir/src/config.c.o -MF CMakeFiles/MyApplication.dir/src/config.c.o.d -o CMakeFiles/MyApplication.dir/src/config.c.o -c /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/config.c
+
+CMakeFiles/MyApplication.dir/src/config.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyApplication.dir/src/config.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/config.c > CMakeFiles/MyApplication.dir/src/config.c.i
+
+CMakeFiles/MyApplication.dir/src/config.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyApplication.dir/src/config.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/config.c -o CMakeFiles/MyApplication.dir/src/config.c.s
+
+CMakeFiles/MyApplication.dir/src/mutex_manager.c.o: CMakeFiles/MyApplication.dir/flags.make
+CMakeFiles/MyApplication.dir/src/mutex_manager.c.o: /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/mutex_manager.c
+CMakeFiles/MyApplication.dir/src/mutex_manager.c.o: CMakeFiles/MyApplication.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/MyApplication.dir/src/mutex_manager.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyApplication.dir/src/mutex_manager.c.o -MF CMakeFiles/MyApplication.dir/src/mutex_manager.c.o.d -o CMakeFiles/MyApplication.dir/src/mutex_manager.c.o -c /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/mutex_manager.c
+
+CMakeFiles/MyApplication.dir/src/mutex_manager.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/MyApplication.dir/src/mutex_manager.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/mutex_manager.c > CMakeFiles/MyApplication.dir/src/mutex_manager.c.i
+
+CMakeFiles/MyApplication.dir/src/mutex_manager.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/MyApplication.dir/src/mutex_manager.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/mutex_manager.c -o CMakeFiles/MyApplication.dir/src/mutex_manager.c.s
+
 # Object files for target MyApplication
 MyApplication_OBJECTS = \
 "CMakeFiles/MyApplication.dir/src/main.c.o" \
@@ -281,9 +309,11 @@ MyApplication_OBJECTS = \
 "CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o" \
 "CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o" \
 "CMakeFiles/MyApplication.dir/src/pipes_manager.c.o" \
-"CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o" \
+"CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o" \
 "CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o" \
-"CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o"
+"CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o" \
+"CMakeFiles/MyApplication.dir/src/config.c.o" \
+"CMakeFiles/MyApplication.dir/src/mutex_manager.c.o"
 
 # External object files for target MyApplication
 MyApplication_EXTERNAL_OBJECTS =
@@ -299,15 +329,17 @@ MyApplication: CMakeFiles/MyApplication.dir/src/control_panel/control_panel_conf
 MyApplication: CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gauge.c.o
 MyApplication: CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o
 MyApplication: CMakeFiles/MyApplication.dir/src/pipes_manager.c.o
-MyApplication: CMakeFiles/MyApplication.dir/src/central_manager/values_average.c.o
+MyApplication: CMakeFiles/MyApplication.dir/src/central_manager/circulare_buffer.c.o
 MyApplication: CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o
 MyApplication: CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o
+MyApplication: CMakeFiles/MyApplication.dir/src/config.c.o
+MyApplication: CMakeFiles/MyApplication.dir/src/mutex_manager.c.o
 MyApplication: CMakeFiles/MyApplication.dir/build.make
 MyApplication: CMakeFiles/MyApplication.dir/compiler_depend.ts
 MyApplication: /usr/lib/x86_64-linux-gnu/libSDL2.so
 MyApplication: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 MyApplication: CMakeFiles/MyApplication.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable MyApplication"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking C executable MyApplication"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyApplication.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,7 +1,15 @@
 #include "control_panel_gauge.h"
 
-Gauge create_gauge(int x, int y, int width, int height, SDL_Color fg, SDL_Color bg) {
-    Gauge gauge = {x, y, width, height, 0, fg, bg}; // Par défaut, valeur à 0
+Gauge *gauge_init(int x, int y, int width, int height, SDL_Color fg, SDL_Color bg) {
+
+    Gauge *gauge = (Gauge *)malloc(sizeof(Gauge));
+    gauge->x = x;
+    gauge->y = y;
+    gauge->width = width;
+    gauge->height = height;
+    gauge->fg = fg;
+    gauge->bg = bg;
+
     return gauge;
 }
 
@@ -20,9 +28,11 @@ void render_gauge(SDL_Renderer* renderer, Gauge* gauge) {
     SDL_RenderFillRect(renderer, &fg_rect);
 }
 
+
 void update_gauge(Gauge* gauge, float new_value) {
     if (!gauge) return;
 
+    printf("Gauge value: %f\n", new_value);
     // Limiter la valeur entre 0 et 100 pour rester dans les limites de la jauge
     if (new_value < 0) {
         gauge->value = 0;

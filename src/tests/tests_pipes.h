@@ -10,9 +10,6 @@
  * Fonction pour tester la communication via les pipes.
  * Vérifie que les pipes peuvent être correctement lus et que l'information se propage de l'un à l'autre.
  */
-void test_pipes_communication(WaterTankSimulator *simulation,
-                               WaterTankManager *manager,
-                               CentralManagerData *central,
-                               ControlPanelManager *controlPanel);
+void test_pipes_communication(WaterTankSimulation *simulation, WaterTankManager *manager, CentralManager *central, ControlPanelManager *controlPanel, ControlPanelGUI *gui);
 
 #endif // TEST_PIPES_H

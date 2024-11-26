@@ -6,12 +6,13 @@
 #define PIPES_MANAGER_H
 
 
-#include "control_panel_manager.h"
+#include "control_panel/control_panel_manager.h"
+#include "control_panel/control_panel_gui.h"
 #include "water_tank_simulation.h"
 #include "water_tank_manager.h"
 #include "central_manager/central_manager.h"
 
-int setup_water_pipes(WaterTankSimulator *simulation, WaterTankManager *manager, CentralManagerData *central_data, ControlPanelManager *controlPanel);
+int setup_water_pipes(WaterTankSimulation *simulation, WaterTankManager *manager, CentralManager *central, ControlPanelManager *controlPanel, ControlPanelGUI *gui);
 
 
 

@@ -37,11 +37,12 @@ int start_thread(pthread_t* thread, void* (*start_routine)(void*), void* arg) {
 void thread_list_start_all(ThreadList* list) {
     for (size_t i = 0; i < list->count; ++i) {
         printf("starting thread %lu\n", i);
-        sleep(1);
+/*
         printf("routine du thread %ld : %p\n", i, list->start_routines[i]);
         printf("argument du thread %ld :  %p\n", i, list->args[i]);
-        sleep(1);
+*/
 
+        //sleep(1);
         if (start_thread(&list->threads[i], (void* (*)(void*))list->start_routines[i], list->args[i]) != 0) {
             perror("Erreur lors de la création du thread");
         }

@@ -1,46 +1,53 @@
-#include "control_panel_manager.h"
 #include <control_panel_gui.h>
+#include "control_panel_manager.h"
 #include <stdio.h>
 #include <unistd.h>
+#include <stdbool.h>
+#include "../config.h"
 
 // Fonction principale du thread
-void* control_panel_manager_thread(void* arg) {
+void *control_panel_manager_thread(void* arg) {
 
     printf("Control Panel Manager Thread Started\n");
 
-    ControlPanelManager* panel = (ControlPanelManager*)arg;
-    ControlPanelData data;
+    ControlPanelManager *panel = (void*)arg;//control_panel_manager_init();
+
     float water_average = 0.0;
 
-    int i;
-    while(1)
-    {
-        // Rien
-        i = 0;
+    if(DEBUG == true) {
+        // Boucle blanche
+        int i;
+        while(1) {
+            i = 0;
+            sleep(1);
+        }
     }
 
     while (1) {
-        // Lire la moyenne de l'eau
-        if (read(panel->water_average_pipe[0], &water_average, sizeof(water_average)) > 0) {
-            printf("Water level received from simulator: %f\n", water_average);
-            data.water_average = water_average;
+
+        // Lecture du niveau d'eau moyen envoyé par le central manager
+        if (read(panel->water_average_pipe[0], &water_average, sizeof(water_average)) == -1) {
+            perror("Erreur de lecture dans panel->water_average_pipe \n");
         }
+        panel->water_average = water_average;
 
-        // Transmettre la donnée au GUI
-        if (panel->gui) {
-            update_gui(panel->gui, &data); // Mettre à jour l'interface avec les nouvelles données
+        // Affichage du niveau d'eau moyen enregistré
+        printf("ControlPanel water average : %f \n", water_average);
+
+        // Ecriture du niveau d'eau à envoyer par le central manager
+        if (write(panel->water_average_gui_pipe[1], &water_average, sizeof(water_average)) == -1) {
+            perror("Erreur d'écriture dans panel->water_average_gui_pipe \n");
         }
-
-        sleep(1); // Pause pour éviter un boucle infinie trop rapide
-    }
-
-    return NULL;
-}
-
-// Fonction pour mettre à jour l'interface avec les nouvelles données
-void update_gui(ControlPanelGUI* gui, ControlPanelData* data) {
-    if (gui && data) {
-        gui->gauge.value = data->water_average;  // Mise à jour de la jauge avec la nouvelle moyenne
-        control_panel_gui_render(gui);  // Redessiner le panneau de contrôle avec les nouvelles données
     }
 }
+
+ControlPanelManager *control_panel_manager_init() {
+    ControlPanelManager *panel_manager = (ControlPanelManager*)malloc(sizeof(ControlPanelManager));
+
+    // Initialise le niveau d'eau moyen
+    panel_manager->water_average = 0.0;
+
+    return panel_manager;
+}
+
+
