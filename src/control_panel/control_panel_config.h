@@ -9,6 +9,11 @@ typedef struct {
     SDL_Rect rect;         // Position et taille (x, y, w, h)
 } ImageConfig;
 
+// Structure pour définir les paramètres d'une font
+typedef struct {
+    const char *file_path; // Chemin de l'image
+} FontConfig;
+
 // Structure représentant la configuration de la jauge
 typedef struct {
     int x, y;               // Position de la jauge (coin supérieur gauche)
@@ -20,6 +25,8 @@ typedef struct {
 // Déclaration de la configuration des images
 extern const ImageConfig control_panel_images[];
 extern const int control_panel_image_count;
+
+extern const FontConfig font_config;
 
 // Déclaration de la configuration de la jauge
 extern const GaugeConfig control_panel_gauge_config;

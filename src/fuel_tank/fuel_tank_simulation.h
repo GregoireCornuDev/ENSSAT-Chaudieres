@@ -8,7 +8,7 @@ typedef struct {
     float fuel_level;         // Niveau actuel du fuel
     int supply_pipe[2];      // Pipe pour contrôler la vanne d'approvisionnement
     int drain_pipe[2];       // Pipe pour contrôler la vanne de sortie
-} FuelTankSimulator;
+} FuelTanksimulation;
 
 // Fonction principale du thread
 void* fuel_tank_simulation_thread(void* arg);

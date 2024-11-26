@@ -17,7 +17,7 @@
 #include <TargetConditionals.h>
 #include <Foundation/Foundation.h>
 
-#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
+#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_simulation == 1)
 #import <MobileCoreServices/MobileCoreServices.h> // for UTCoreTypes.h
 #import <ImageIO/ImageIO.h>
 #import <UIKit/UIImage.h>

@@ -29,38 +29,38 @@ macro(check_required_components _NAME)
     endforeach()
 endmacro()
 
-macro(_check_target_is_simulator)
+macro(_check_target_is_simulation)
     set(src [===[
     #include <TargetConditionals.h>
-    #if defined(TARGET_OS_SIMULATOR) && TARGET_OS_SIMULATOR
-    int target_is_simulator;
+    #if defined(TARGET_OS_simulation) && TARGET_OS_simulation
+    int target_is_simulation;
     #endif
-    int main(int argc, char *argv[]) { return target_is_simulator; }
+    int main(int argc, char *argv[]) { return target_is_simulation; }
     ]===])
     if(CMAKE_C_COMPILER)
         include(CheckCSourceCompiles)
-        check_c_source_compiles("${src}" SDL_TARGET_IS_SIMULATOR)
+        check_c_source_compiles("${src}" SDL_TARGET_IS_simulation)
     elseif(CMAKE_CXX_COMPILER)
         include(CheckCXXSourceCompiles)
-        check_cxx_source_compiles("${src}" SDL_TARGET_IS_SIMULATOR)
+        check_cxx_source_compiles("${src}" SDL_TARGET_IS_simulation)
     else()
         enable_language(C)
         include(CheckCSourceCompiles)
-        check_c_source_compiles("${src}" SDL_TARGET_IS_SIMULATOR)
+        check_c_source_compiles("${src}" SDL_TARGET_IS_simulation)
     endif()
 endmacro()
 
 if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
-    _check_target_is_simulator()
-    if(SDL_TARGET_IS_SIMULATOR)
-        set(_xcfw_target_subdir "ios-arm64_x86_64-simulator")
+    _check_target_is_simulation()
+    if(SDL_TARGET_IS_simulation)
+        set(_xcfw_target_subdir "ios-arm64_x86_64-simulation")
     else()
         set(_xcfw_target_subdir "ios-arm64")
     endif()
 elseif(CMAKE_SYSTEM_NAME STREQUAL "tvOS")
-    _check_target_is_simulator()
-    if(SDL_TARGET_IS_SIMULATOR)
-        set(_xcfw_target_subdir "tvos-arm64_x86_64-simulator")
+    _check_target_is_simulation()
+    if(SDL_TARGET_IS_simulation)
+        set(_xcfw_target_subdir "tvos-arm64_x86_64-simulation")
     else()
         set(_xcfw_target_subdir "tvos-arm64")
     endif()

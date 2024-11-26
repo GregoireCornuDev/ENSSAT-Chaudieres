@@ -8,6 +8,8 @@
 
 
 extern const bool DEBUG;
+extern const float WATER_FLOW_RATE;
+extern const char *FONT_PATH;
 
 
 #endif //CONFIG_H

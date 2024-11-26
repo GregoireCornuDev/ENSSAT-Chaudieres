@@ -283,9 +283,9 @@ jobs:
               -Werror=dev                                                   \
               -B build_tvos
           cmake --build build_tvos --config Release --verbose
-      - name: 'CMake (configure + build) iOS simulator'
+      - name: 'CMake (configure + build) iOS simulation'
         run: |
-          sysroot=$(xcodebuild -version -sdk iphonesimulator Path)
+          sysroot=$(xcodebuild -version -sdk iphonesimulation Path)
           echo "sysroot=$sysroot"
           cmake -S "${{ steps.src.outputs.path }}/cmake/test"               \
               -DTEST_SHARED=TRUE                                            \
@@ -295,11 +295,11 @@ jobs:
               -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64"                      \
               -DCMAKE_OSX_SYSROOT="${sysroot}"                              \
               -Werror=dev                                                   \
-              -B build_ios_simulator
-          cmake --build build_ios_simulator --config Release --verbose
-      - name: 'CMake (configure + build) tvOS simulator'
+              -B build_ios_simulation
+          cmake --build build_ios_simulation --config Release --verbose
+      - name: 'CMake (configure + build) tvOS simulation'
         run: |
-          sysroot=$(xcodebuild -version -sdk appletvsimulator Path)
+          sysroot=$(xcodebuild -version -sdk appletvsimulation Path)
           echo "sysroot=$sysroot"
           cmake -S "${{ steps.src.outputs.path }}/cmake/test"               \
               -DTEST_SHARED=TRUE                                            \
@@ -309,8 +309,8 @@ jobs:
               -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64"                      \
               -DCMAKE_OSX_SYSROOT="${sysroot}"                              \
               -Werror=dev                                                   \
-              -B build_tvos_simulator
-          cmake --build build_tvos_simulator --config Release --verbose
+              -B build_tvos_simulation
+          cmake --build build_tvos_simulation --config Release --verbose
   msvc:
     needs: [src]
     runs-on: windows-2019

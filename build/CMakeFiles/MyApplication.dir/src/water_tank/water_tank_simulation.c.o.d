@@ -60,7 +60,11 @@ CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o: \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/../config.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/../mutex_manager.h \
  /usr/include/pthread.h /usr/include/sched.h \

@@ -6,6 +6,8 @@
 #include <control_panel_manager.h>
 #include <unistd.h>
 #include "../config.h"
+#include "indicator.h"
+#include "gauge.h"
 
 #include "control_panel_config.h"
 
@@ -42,21 +44,29 @@ void *control_panel_gui_thread(void *arg) {
     SDL_Event event;
 
     while (running) {
-        printf("crash ? \n");
 
         // Lecture du niveau d'eau moyen envoyé par le central manager
         if (read(gui->water_average_gui_pipe[0], &water_average, sizeof(water_average)) == -1) {
             perror("Erreur de lecture dans gui->water_average_gui_pipe \n");
         }
-        printf(" GUI water_average : %f\n", water_average);
+        printf("GUI water_average : %f\n", water_average);
         fflush(stdout);
+        if(gui->water_indicator == NULL)
+        {
+            printf("Erreur de lecture dans gui->water_indicator \n");
+        }
 
 
         printf("Update de l'écran \n");
         fflush(stdout);
 
         // Met à jour la valeur de la jauge
-         update_gauge(gui->gauge, water_average);
+        gauge_update(gui->gauge, water_average);
+        printf("Mise à jour de la valeur de la jauge \n");
+
+        indicator_update(gui->water_indicator, gui->renderer, water_average);
+        printf("Mise à jour de la valeur de l'indicateur \n");
+
 
         // Gestion des événements SDL
         while (SDL_PollEvent(&event)) {
@@ -127,6 +137,12 @@ void *control_panel_gui_init(ControlPanelGUI *gui ) {
     SDL_Color bg = {50, 50, 50, 255}; // Gris
     gui->gauge = gauge_init(50, 100, 30, 200, fg, bg);
 
+    // Initiliser indicateur de l'eau
+    SDL_Color rect_color = {100, 100, 255, 255}; // Couleur du rectangle
+    SDL_Color text_color = {255, 255, 255, 255}; // Couleur du texte
+    gui->water_indicator = indicator_init(gui->renderer, 50, 50, 150, 80, rect_color, text_color, "Water Level");
+
+
 
     if (!gui->textures) {
         printf("Erreur : Allocation mémoire échouée pour les textures.\n");
@@ -151,7 +167,7 @@ void *control_panel_gui_init(ControlPanelGUI *gui ) {
 // Afficher les images
 void control_panel_gui_render(ControlPanelGUI *gui) {
     if (!gui) return;
-
+/*
     for (int i = 0; i < gui->texture_count; ++i) {
         SDL_RenderCopy(gui->renderer, gui->textures[i], NULL, &control_panel_images[i].rect);
         const char *error = SDL_GetError();
@@ -160,9 +176,11 @@ void control_panel_gui_render(ControlPanelGUI *gui) {
             SDL_ClearError();
         }
     }
+*/
+    // Crée les rendus des éléments à mettre à jour
+    gauge_render(gui->renderer, gui->gauge);
+    indicator_render(gui->renderer, gui->water_indicator);
 
-    // Dessiner la jauge
-    render_gauge(gui->renderer, gui->gauge);
 }
 
 // Mettre à jour la jauge avec la nouvelle valeur
@@ -175,8 +193,6 @@ void control_panel_gui_update(ControlPanelGUI *gui) {
     if (gui) {
         control_panel_gui_render(gui);  // Re-render le panneau avec les nouvelles données
     }
-
-
 
     // Met à jour l'écran avec le renderer
     SDL_RenderPresent(gui->renderer);
@@ -195,6 +211,8 @@ void control_panel_gui_destroy(ControlPanelGUI *gui) {
     }
     free(gui->textures);
 
+    gauge_destroy(gui->gauge);
+    indicator_destroy(gui->water_indicator);
     SDL_DestroyRenderer(gui->renderer);
     SDL_DestroyWindow(gui->window);
     IMG_Quit();

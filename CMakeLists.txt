@@ -7,6 +7,9 @@ find_package(SDL2 REQUIRED)
 # Rechercher SDL2_image
 find_package(SDL2_image REQUIRED)
 
+# Rechercher SDL2_ttf
+find_package(SDL2_ttf REQUIRED)
+
 # Ajouter tous les fichiers source
 set(SOURCES
         src/main.c
@@ -17,7 +20,7 @@ set(SOURCES
         src/fuel_tank/fuel_tank_simulation.c
         src/control_panel/control_panel_gui.c
         src/control_panel/control_panel_config.c
-        src/control_panel/control_panel_gauge.c
+        src/control_panel/gauge.c
         src/central_manager/central_manager.c
         src/pipes_manager.c
         src/central_manager/circulare_buffer.c
@@ -25,6 +28,8 @@ set(SOURCES
         src/tests/tests_pipes.c
         src/config.c
         src/mutex_manager.c
+        src/control_panel/indicator.h
+        src/control_panel/indicator.c
 )
 
 # Créer l'exécutable
@@ -34,6 +39,7 @@ add_executable(MyApplication ${SOURCES})
 target_include_directories(MyApplication PRIVATE
         ${SDL2_INCLUDE_DIRS}            # Inclure SDL2
         ${SDL2_IMAGE_INCLUDE_DIRS}      # Inclure SDL2_image
+        ${SDL2_TTF_INCLUDE_DIRS}        # Include SDL2_ttf
         ${CMAKE_CURRENT_SOURCE_DIR}/src/control_panel  # Inclure control_panel
         ${CMAKE_CURRENT_SOURCE_DIR}/src/water_tank    # Inclure water_tank
 )
@@ -42,4 +48,5 @@ target_include_directories(MyApplication PRIVATE
 target_link_libraries(MyApplication PRIVATE
         SDL2::SDL2                    # Lier SDL2
         SDL2_image::SDL2_image        # Lier SDL2_image
+        SDL2_ttf::SDL2_ttf            # Lier SDL_ttf
 )

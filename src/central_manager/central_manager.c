@@ -25,7 +25,7 @@ void *central_manager_thread(void *arg) {
     float fuel_average = 0.0;
 
     // Initialise le central manager
-    CentralManager *central = (void*)arg;//central_manager_init();
+    CentralManager *central = (void*)arg;
 
     if(DEBUG == true) {
         // Boucle blanche
@@ -51,11 +51,6 @@ void *central_manager_thread(void *arg) {
       //  pthread_mutex_lock(&water_level_mutex);
         read(central->water_level_pipe[0], &water_level, sizeof(water_level));
      //   pthread_mutex_unlock(&water_level_mutex);
-
-        // Affichage du niveau d'eau enregistré
-        printf("CentralManager water level : %f \n", water_level);
-
-        //   pthread_mutex_unlock(&water_level_mutex);
 
         // Affichage du niveau d'eau enregistré
         printf("CentralManager water level : %f \n", water_level);

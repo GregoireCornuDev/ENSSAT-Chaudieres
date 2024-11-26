@@ -17,9 +17,12 @@ typedef struct {
 Gauge *gauge_init(int x, int y, int width, int height, SDL_Color fg, SDL_Color bg);
 
 // Dessine la jauge dans le renderer SDL
-void render_gauge(SDL_Renderer* renderer, Gauge* gauge);
+void gauge_render(SDL_Renderer* renderer, Gauge* gauge);
 
 // Met à jour la jauge
 void gauge_update(Gauge* gauge, float new_value);
+
+// Fonction pour détruire un jauge
+void gauge_destroy(Gauge *gauge);
 
 #endif // CONTROL_PANEL_GAUGE_H

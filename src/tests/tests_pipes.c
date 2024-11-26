@@ -115,7 +115,7 @@ void test_pipes_communication(WaterTankSimulation *simulation, WaterTankManager 
 
     printf("Envoi de la valeur depuis le tank ...\n");
     if(write(tank->water_level_pipe[1], &buffer_value, sizeof(buffer_value)) > 0) {
-        printf("Valeur envoyée depuis le manager : %f\n", buffer_value);
+        printf("Valeur envoyée depuis le tank : %f\n", buffer_value);
     } else {
         printf("Erreur lors de l'écriture de la valeur depuis le tank.\n");
     }

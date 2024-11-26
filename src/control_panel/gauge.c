@@ -1,4 +1,4 @@
-#include "control_panel_gauge.h"
+#include "gauge.h"
 
 Gauge *gauge_init(int x, int y, int width, int height, SDL_Color fg, SDL_Color bg) {
 
@@ -13,7 +13,7 @@ Gauge *gauge_init(int x, int y, int width, int height, SDL_Color fg, SDL_Color b
     return gauge;
 }
 
-void render_gauge(SDL_Renderer* renderer, Gauge* gauge) {
+void gauge_render(SDL_Renderer* renderer, Gauge* gauge) {
     // Dessiner le fond de la jauge (rectangle complet)
     SDL_Rect bg_rect = {gauge->x, gauge->y, gauge->width, gauge->height};
     SDL_SetRenderDrawColor(renderer, gauge->bg.r, gauge->bg.g, gauge->bg.b, gauge->bg.a);
@@ -41,5 +41,13 @@ void gauge_update(Gauge* gauge, float new_value) {
     } else {
         gauge->value = new_value;
     }
+}
+
+// Détruire une jauge
+void gauge_destroy(Gauge *gauge)
+{
+    if (!gauge) return;
+
+    free(gauge);
 }
 

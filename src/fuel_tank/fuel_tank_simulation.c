@@ -5,7 +5,7 @@
 
 // Fonction principale du thread
 void* fuel_tank_simulation_thread(void* arg) {
-    FuelTankSimulator* tank = (FuelTankSimulator*)arg;
+    FuelTanksimulation* tank = (FuelTanksimulation*)arg;
     char supply_command, drain_command;
 
     while (1) {
@@ -36,7 +36,7 @@ void* fuel_tank_simulation_thread(void* arg) {
         }
 
         // Affichage du niveau de fuel
-        printf("Current fuel level: %d\n", tank->fuel_level);
+        printf("Current fuel level: %f\n", tank->fuel_level);
 
         // Pause de 1 seconde
         sleep(1);

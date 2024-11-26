@@ -3,7 +3,8 @@
 
 #include <control_panel_manager.h>
 #include <SDL2/SDL.h>
-#include "control_panel_gauge.h" // Inclusion pour la jauge
+#include "gauge.h"
+#include "indicator.h"
 
 // Structure représentant une image à afficher
 typedef struct {
@@ -18,6 +19,7 @@ typedef struct {
     SDL_Texture **textures;    // Tableau des textures
     int texture_count;         // Nombre de textures
     Gauge *gauge;               // Jauge verticale
+    Indicator *water_indicator; // Indicateur de l'eau
     int water_average_gui_pipe[2]; // Pipe pour recevoir le niveau moyen depuis le ControlPanelManager
 } ControlPanelGUI;
 

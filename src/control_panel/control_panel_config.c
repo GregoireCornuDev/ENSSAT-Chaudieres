@@ -6,6 +6,10 @@ const ImageConfig control_panel_images[] = {
     {"resources/image2.png", {300, 50, 200, 200}} // Image 2 : position (300, 50), taille 200x200
 };
 
+const FontConfig font_config = {
+    {"resources/Impacted2.O.ttf"}
+};
+
 // Configuration de la jauge (position et taille)
 const GaugeConfig control_panel_gauge_config = {
     50, 50,    // Position de la jauge (X, Y)
