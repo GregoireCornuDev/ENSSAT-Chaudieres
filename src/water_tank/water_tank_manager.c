@@ -10,8 +10,6 @@
 #include "../mutex_manager.h"
 #include <fcntl.h>    // Pour fcntl() et les constantes comme F_SETFL, O_NONBLOCK
 
-
-
 // Fonction principale du thread
 void* water_tank_manager_thread(void* arg) {
 
@@ -27,7 +25,7 @@ void* water_tank_manager_thread(void* arg) {
     float use_command = 0.0;    // Vanne de sortie fermée par défaut (0.0 à 1.0)
     float water_level = 0.0;    // Niveau de l'eau
 
-    if(DEBUG == true) {
+    if(MODE_DEBUG == !true) {
         // Boucle blanche
         int i;
         while(1) {
@@ -53,6 +51,7 @@ void* water_tank_manager_thread(void* arg) {
         water_level_triggers_react(tank);
     }
 }
+
 // Initialise le Water Tank Manager
 void water_tank_manager_init(WaterTankManager *tank) {
 

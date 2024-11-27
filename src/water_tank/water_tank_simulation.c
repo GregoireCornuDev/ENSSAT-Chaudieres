@@ -16,14 +16,12 @@ void *water_tank_simulation_thread(void* arg) {
 
     WaterTankSimulation *simulation = (void*)arg;
 
-    char supply_command, drain_command;
-
     // Initialisation du réservoir
     water_tank_simulation_init(simulation);
 
     float water_level = 0.0;
 
-    if(DEBUG == true) {
+    if(MODE_DEBUG == !true) {
         // Boucle blanche
         int i;
         while(1) {
@@ -32,7 +30,7 @@ void *water_tank_simulation_thread(void* arg) {
         }
     }
 
-    printf("Simulation : Démarrage \n");
+    printf("Simulation Eau : Démarrage \n");
     while (1) {
 
         // Pause de 1 seconde
@@ -53,10 +51,10 @@ void *water_tank_simulation_thread(void* arg) {
         water_level_transmit(simulation);
 
         // S'informe sur l'état de la vanne d'approvisionnement
-        supply_valve_open_close(simulation);
+        water_supply_valve_open_close(simulation);
 
         // Renseigne l'état de la vanne d'usage
-        usage_valve_control(simulation);
+        water_usage_valve_control(simulation);
     }
 }
 
@@ -68,7 +66,7 @@ void water_tank_simulation_init(WaterTankSimulation *simulation) {
     simulation->water_use_valve = 0.0f;
     simulation->last_trigger = '0';
 
-    printf("Simulation : Initialisation OK \n");
+    printf("Simulation Eau : Initialisation OK \n");
 
 
 }
@@ -99,7 +97,7 @@ void water_level_sensors_trigger(WaterTankSimulation *simulation) {
 
     // Si le nouveau trigger est différent
     if (new_trigger != last_trigger) {
-        //printf("Simulation : Sensors trigger -> nouveau trigger à envoyer : %c \n", new_trigger);
+        //printf("Simulation Eau : Sensors trigger -> nouveau trigger à envoyer : %c \n", new_trigger);
 
         // Enregistre le dernier trigger effectué dans la struct
         simulation->last_trigger = new_trigger;
@@ -108,7 +106,7 @@ void water_level_sensors_trigger(WaterTankSimulation *simulation) {
         if(write(simulation->water_level_trigger_pipe[1], &new_trigger, sizeof(new_trigger)) == -1) {
             perror("Erreur d'écriture dans simulation->water_level_trigger_pipe \n");
         }
-        //printf("Simulation : Sensors trigger -> trigger envoyé : %c \n", new_trigger);
+        //printf("Simulation Eau : Sensors trigger -> trigger envoyé : %c \n", new_trigger);
 
     }
 }
@@ -128,18 +126,18 @@ char water_level_measure(float water_level) {
     }
     // Si le niveau d'eau est > 30.0 et < 80.0, new_trigger conserve 'x'
 
-    //printf("Simulation : Sensors trigger -> trigger mesuré : %c \n", new_trigger);
+    //printf("Simulation Eau : Sensors trigger -> trigger mesuré : %c \n", new_trigger);
 
     // Retourne le trigger
     return new_trigger;
 }
 
 // S'informe sur l'état de la vanne d'approvisionnement
-void supply_valve_open_close(WaterTankSimulation *simulation) {
+void water_supply_valve_open_close(WaterTankSimulation *simulation) {
 
     int open_close_valve = 0;// open = 1 | close = 0
 
-    //printf("Simulation : Vanne d'approvisionnement -> ? \n");
+    //printf("Simulation Eau : Vanne d'approvisionnement -> ? \n");
 
     // Paramètre le pipe comme non bloquant
     int flags = fcntl(simulation->water_supply_pipe[0], F_GETFL, 0);
@@ -147,21 +145,21 @@ void supply_valve_open_close(WaterTankSimulation *simulation) {
 
     // Reçoit l'ordre d'ouvrir ou fermer la vanne d'approvisionnement s'il est présent dans le pipe
     if(read(simulation->water_supply_pipe[0], &open_close_valve, sizeof(open_close_valve)) > 0) {
-        printf("Simulation : Vanne d'approvisionnement -> commande reçue : %d \n", open_close_valve);
+        printf("Simulation Eau : Vanne d'approvisionnement -> commande reçue : %d \n", open_close_valve);
         simulation->water_supply_valve = open_close_valve;
     // ... sinon, continue sans rien faire
     } else {
         if (errno == EAGAIN) {
-            //printf("Simulation : Vanne d'approvisionnement -> pipe water_supply_pipe vide \n");
+            //printf("Simulation Eau : Vanne d'approvisionnement -> pipe water_supply_pipe vide \n");
         } else {
             perror("Erreur de lecture dans simulation->water_supply_pipe \n");
         }
-        //printf("Simulation : Vanne d'approvisionnement -> Pas d'action \n");
+        //printf("Simulation Eau : Vanne d'approvisionnement -> Pas d'action \n");
     }
 }
 
 // S'informe sur l'état d'ouverture proportionnel de la vanne d'usage
-void usage_valve_control(WaterTankSimulation *simulation) {
+void water_usage_valve_control(WaterTankSimulation *simulation) {
 
     float water_use_valve = 0.5f;
 
@@ -177,15 +175,15 @@ void water_level_update(WaterTankSimulation *simulation) {
     // Approvisionnement ouvert/fermé
     if (simulation->water_supply_valve == 0) {
 
-        printf("Simulation : Approvisionnement eau -> fermé \n");
+        printf("Simulation Eau : Approvisionnement eau -> fermé \n");
 
     } else if (simulation->water_supply_valve == 1) {
 
-        printf("Simulation : Approvisionnement eau -> ouvert \n");
+        printf("Simulation Eau : Approvisionnement eau -> ouvert \n");
         water_level += WATER_FLOW_RATE;
 
     } else {
-        perror("Simulation : Approvisionnement -> Commande inmpossible");
+        perror("Simulation Eau : Approvisionnement -> Commande inmpossible");
     }
 
     // Usage proportionnel

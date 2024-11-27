@@ -345,30 +345,6 @@ src/fuel_tank/fuel_tank_manager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.s
 .PHONY : src/fuel_tank/fuel_tank_manager.c.s
 
-src/fuel_tank/fuel_tank_simulation.o: src/fuel_tank/fuel_tank_simulation.c.o
-.PHONY : src/fuel_tank/fuel_tank_simulation.o
-
-# target to build an object file
-src/fuel_tank/fuel_tank_simulation.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.o
-.PHONY : src/fuel_tank/fuel_tank_simulation.c.o
-
-src/fuel_tank/fuel_tank_simulation.i: src/fuel_tank/fuel_tank_simulation.c.i
-.PHONY : src/fuel_tank/fuel_tank_simulation.i
-
-# target to preprocess a source file
-src/fuel_tank/fuel_tank_simulation.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.i
-.PHONY : src/fuel_tank/fuel_tank_simulation.c.i
-
-src/fuel_tank/fuel_tank_simulation.s: src/fuel_tank/fuel_tank_simulation.c.s
-.PHONY : src/fuel_tank/fuel_tank_simulation.s
-
-# target to generate assembly for a file
-src/fuel_tank/fuel_tank_simulation.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_simulation.c.s
-.PHONY : src/fuel_tank/fuel_tank_simulation.c.s
-
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -440,6 +416,54 @@ src/pipes_manager.s: src/pipes_manager.c.s
 src/pipes_manager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/pipes_manager.c.s
 .PHONY : src/pipes_manager.c.s
+
+src/simulation/fuel_tank_simulation.o: src/simulation/fuel_tank_simulation.c.o
+.PHONY : src/simulation/fuel_tank_simulation.o
+
+# target to build an object file
+src/simulation/fuel_tank_simulation.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/fuel_tank_simulation.c.o
+.PHONY : src/simulation/fuel_tank_simulation.c.o
+
+src/simulation/fuel_tank_simulation.i: src/simulation/fuel_tank_simulation.c.i
+.PHONY : src/simulation/fuel_tank_simulation.i
+
+# target to preprocess a source file
+src/simulation/fuel_tank_simulation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/fuel_tank_simulation.c.i
+.PHONY : src/simulation/fuel_tank_simulation.c.i
+
+src/simulation/fuel_tank_simulation.s: src/simulation/fuel_tank_simulation.c.s
+.PHONY : src/simulation/fuel_tank_simulation.s
+
+# target to generate assembly for a file
+src/simulation/fuel_tank_simulation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/fuel_tank_simulation.c.s
+.PHONY : src/simulation/fuel_tank_simulation.c.s
+
+src/simulation/tank_simulation.o: src/simulation/tank_simulation.c.o
+.PHONY : src/simulation/tank_simulation.o
+
+# target to build an object file
+src/simulation/tank_simulation.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/tank_simulation.c.o
+.PHONY : src/simulation/tank_simulation.c.o
+
+src/simulation/tank_simulation.i: src/simulation/tank_simulation.c.i
+.PHONY : src/simulation/tank_simulation.i
+
+# target to preprocess a source file
+src/simulation/tank_simulation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/tank_simulation.c.i
+.PHONY : src/simulation/tank_simulation.c.i
+
+src/simulation/tank_simulation.s: src/simulation/tank_simulation.c.s
+.PHONY : src/simulation/tank_simulation.s
+
+# target to generate assembly for a file
+src/simulation/tank_simulation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/tank_simulation.c.s
+.PHONY : src/simulation/tank_simulation.c.s
 
 src/tests/tests_pipes.o: src/tests/tests_pipes.c.o
 .PHONY : src/tests/tests_pipes.o
@@ -573,9 +597,6 @@ help:
 	@echo "... src/fuel_tank/fuel_tank_manager.o"
 	@echo "... src/fuel_tank/fuel_tank_manager.i"
 	@echo "... src/fuel_tank/fuel_tank_manager.s"
-	@echo "... src/fuel_tank/fuel_tank_simulation.o"
-	@echo "... src/fuel_tank/fuel_tank_simulation.i"
-	@echo "... src/fuel_tank/fuel_tank_simulation.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -585,6 +606,12 @@ help:
 	@echo "... src/pipes_manager.o"
 	@echo "... src/pipes_manager.i"
 	@echo "... src/pipes_manager.s"
+	@echo "... src/simulation/fuel_tank_simulation.o"
+	@echo "... src/simulation/fuel_tank_simulation.i"
+	@echo "... src/simulation/fuel_tank_simulation.s"
+	@echo "... src/simulation/tank_simulation.o"
+	@echo "... src/simulation/tank_simulation.i"
+	@echo "... src/simulation/tank_simulation.s"
 	@echo "... src/tests/tests_pipes.o"
 	@echo "... src/tests/tests_pipes.i"
 	@echo "... src/tests/tests_pipes.s"

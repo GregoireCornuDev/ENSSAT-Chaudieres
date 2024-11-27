@@ -31,10 +31,10 @@ char water_level_measure(float water_level);
 void water_level_sensors_trigger(WaterTankSimulation *simulation) ;
 
 // S'informe sur l'état de la vanne d'approvisionnement
-void supply_valve_open_close(WaterTankSimulation *simulation);
+void water_supply_valve_open_close(WaterTankSimulation *simulation);
 
 // S'informe sur l'état d'ouverture proportionnel de la vanne d'usage
-void usage_valve_control(WaterTankSimulation *simulation);
+void water_usage_valve_control(WaterTankSimulation *simulation);
 
 // Met à jour le niveau de l'eau dans le réservoir en fonction de l'ouverture des vannes
 void water_level_update(WaterTankSimulation *simulation);

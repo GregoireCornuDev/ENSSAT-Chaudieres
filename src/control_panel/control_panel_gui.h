@@ -18,9 +18,13 @@ typedef struct {
     SDL_Renderer *renderer;    // Renderer SDL
     SDL_Texture **textures;    // Tableau des textures
     int texture_count;         // Nombre de textures
-    Gauge *gauge;               // Jauge verticale
+    Gauge *water_gauge;               // Jauge verticale
+    Gauge *fuel_gauge;               // Jauge verticale
     Indicator *water_indicator; // Indicateur de l'eau
-    int water_average_gui_pipe[2]; // Pipe pour recevoir le niveau moyen depuis le ControlPanelManager
+    Indicator *fuel_indicator; // Indicateur de fuel
+    int water_average_gui_pipe[2]; // Pipe pour recevoir le niveau moyen d'eau depuis le ControlPanelManager
+    int fuel_average_gui_pipe[2]; // Pipe pour recevoir le niveau moyen de fuel depuis le ControlPanelManager
+
 } ControlPanelGUI;
 
 // Fonction principale du thread

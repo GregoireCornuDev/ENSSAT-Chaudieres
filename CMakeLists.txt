@@ -17,7 +17,7 @@ set(SOURCES
         src/water_tank/water_tank_manager.c
         src/water_tank/water_tank_simulation.c
         src/fuel_tank/fuel_tank_manager.c
-        src/fuel_tank/fuel_tank_simulation.c
+        src/simulation/fuel_tank_simulation.c
         src/control_panel/control_panel_gui.c
         src/control_panel/control_panel_config.c
         src/control_panel/gauge.c
@@ -30,6 +30,8 @@ set(SOURCES
         src/mutex_manager.c
         src/control_panel/indicator.h
         src/control_panel/indicator.c
+        src/simulation/tank_simulation.h
+        src/simulation/tank_simulation.c
 )
 
 # Créer l'exécutable

@@ -9,6 +9,8 @@ typedef struct {
 
     int water_level_pipe[2]; // Pipe pour le niveau actuel de l'eau
     int water_average_pipe[2]; // Pipe pour le niveau actuel de l'eau
+    int fuel_level_pipe[2]; // Pipe pour le niveau actuel de fuel
+    int fuel_average_pipe[2]; // Pipe pour le niveau actuel de fuel
 
 } CentralManager;
 

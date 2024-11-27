@@ -29,7 +29,7 @@ void *control_panel_gui_thread(void *arg) {
     control_panel_gui_init(gui);
 
 
-    if(DEBUG == true) {
+    if(MODE_DEBUG == !true) {
         // Boucle blanche
         int i;
         while(1) {
@@ -39,6 +39,7 @@ void *control_panel_gui_thread(void *arg) {
     }
 
     float water_average = 0.0;
+    float fuel_average = 0.0;
 
     int running = 1;
     SDL_Event event;
@@ -57,15 +58,28 @@ void *control_panel_gui_thread(void *arg) {
         }
 
 
+        // Lecture du niveau d'eau moyen envoyé par le central manager
+        if (read(gui->fuel_average_gui_pipe[0], &fuel_average, sizeof(fuel_average)) == -1) {
+            perror("Erreur de lecture dans gui->water_average_gui_pipe \n");
+        }
+        printf("GUI water_average : %f\n", water_average);
+        fflush(stdout);
+        if(gui->fuel_indicator == NULL)
+        {
+            printf("Erreur de lecture dans gui->water_indicator \n");
+        }
+
         printf("Update de l'écran \n");
         fflush(stdout);
 
         // Met à jour la valeur de la jauge
-        gauge_update(gui->gauge, water_average);
-        printf("Mise à jour de la valeur de la jauge \n");
+        printf("Mise à jour de la valeur des jauges \n");
+        gauge_update(gui->water_gauge, water_average);
+        gauge_update(gui->fuel_gauge, fuel_average);
 
+        printf("Mise à jour de la valeur des indicateurs \n");
         indicator_update(gui->water_indicator, gui->renderer, water_average);
-        printf("Mise à jour de la valeur de l'indicateur \n");
+        indicator_update(gui->fuel_indicator, gui->renderer, fuel_average);
 
 
         // Gestion des événements SDL
@@ -132,15 +146,25 @@ void *control_panel_gui_init(ControlPanelGUI *gui ) {
     gui->renderer = renderer;
     gui->texture_count = control_panel_image_count;
     gui->textures = malloc(gui->texture_count * sizeof(SDL_Texture *));
-    // Initialiser la jauge
-    SDL_Color fg = {0, 255, 0, 255}; // Vert
-    SDL_Color bg = {50, 50, 50, 255}; // Gris
-    gui->gauge = gauge_init(50, 100, 30, 200, fg, bg);
+    // Initialiser la jauge d'eau
+    SDL_Color water_fg = {0, 255, 0, 255}; // Vert
+    SDL_Color water_bg = {50, 50, 50, 255}; // Gris
+    gui->water_gauge = gauge_init(50, 100, 30, 240, water_fg, water_bg);
+
+    // Initialiser la jauge de fuel
+    SDL_Color fuel_fg = {0, 255, 0, 255}; // Vert
+    SDL_Color fuel_bg = {50, 50, 50, 255}; // Gris
+    gui->fuel_gauge = gauge_init(50, 200, 30, 240, fuel_fg, fuel_bg);
 
     // Initiliser indicateur de l'eau
-    SDL_Color rect_color = {100, 100, 255, 255}; // Couleur du rectangle
-    SDL_Color text_color = {255, 255, 255, 255}; // Couleur du texte
-    gui->water_indicator = indicator_init(gui->renderer, 50, 50, 150, 80, rect_color, text_color, "Water Level");
+    SDL_Color water_rect_color = {64, 164, 223, 255}; // Couleur de la jauge eau
+    SDL_Color water_text_color = {255, 255, 255, 255}; // Couleur du texte
+    gui->water_indicator = indicator_init(gui->renderer, 50, 50, 150, 80, water_rect_color, water_text_color, "Water Level");
+
+    // Initiliser indicateur de fuel
+    SDL_Color fuel_rect_color = {36, 89, 100, 255}; // Couleur de la jauge fuel
+    SDL_Color fuel_text_color = {255, 255, 255, 255}; // Couleur du texte
+    gui->water_indicator = indicator_init(gui->renderer, 50, 50, 150, 80, fuel_rect_color, fuel_text_color, "Water Level");
 
 
 
@@ -178,8 +202,10 @@ void control_panel_gui_render(ControlPanelGUI *gui) {
     }
 */
     // Crée les rendus des éléments à mettre à jour
-    gauge_render(gui->renderer, gui->gauge);
+    gauge_render(gui->renderer, gui->water_gauge);
+    gauge_render(gui->renderer, gui->fuel_gauge);
     indicator_render(gui->renderer, gui->water_indicator);
+    indicator_render(gui->renderer, gui->fuel_indicator);
 
 }
 
@@ -211,8 +237,10 @@ void control_panel_gui_destroy(ControlPanelGUI *gui) {
     }
     free(gui->textures);
 
-    gauge_destroy(gui->gauge);
+    gauge_destroy(gui->water_gauge);
+    gauge_destroy(gui->fuel_gauge);
     indicator_destroy(gui->water_indicator);
+    indicator_destroy(gui->fuel_indicator);
     SDL_DestroyRenderer(gui->renderer);
     SDL_DestroyWindow(gui->window);
     IMG_Quit();

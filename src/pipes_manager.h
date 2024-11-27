@@ -11,9 +11,12 @@
 #include "water_tank_simulation.h"
 #include "water_tank_manager.h"
 #include "central_manager/central_manager.h"
+#include "fuel_tank/fuel_tank_manager.h"
+#include "simulation/tank_simulation.h"
 
-int setup_water_pipes(WaterTankSimulation *simulation, WaterTankManager *manager, CentralManager *central, ControlPanelManager *controlPanel, ControlPanelGUI *gui);
+int setup_water_pipes(WaterTankSimulation *simulation, WaterTankManager *water_manager, CentralManager *central_manager, ControlPanelManager *control_manager, ControlPanelGUI *gui);
 
+int setup_fuel_pipes(TankSimulation *simulation, FuelTankManager *fuel_manager, CentralManager *central_manager, ControlPanelManager *control_manager, ControlPanelGUI *gui);
 
 
 #endif //PIPES_MANAGER_H

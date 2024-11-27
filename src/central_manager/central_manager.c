@@ -27,7 +27,7 @@ void *central_manager_thread(void *arg) {
     // Initialise le central manager
     CentralManager *central = (void*)arg;
 
-    if(DEBUG == true) {
+    if(MODE_DEBUG == !true) {
         // Boucle blanche
         int i;
         while(1) {
@@ -38,6 +38,7 @@ void *central_manager_thread(void *arg) {
 
     // Initialiser le buffer avec une taille dynamique
     CircularBuffer *water_buffer = circular_buffer_init(5);
+    CircularBuffer *fuel_buffer = circular_buffer_init(10);
     /*
      *if (circular_buffer_init(water_buffer, 5) != 0) {
         printf("Erreur lors de l'initialisation du buffer\n");
@@ -70,6 +71,31 @@ void *central_manager_thread(void *arg) {
             perror("Erreur d'écriture dans central->water_average_pipe \n");
         }
         //pthread_mutex_unlock(&water_average_mutex);
+
+        /** FUEL */
+
+        //  pthread_mutex_lock(&water_level_mutex);
+        read(central->fuel_level_pipe[0], &fuel_level, sizeof(fuel_level));
+        //   pthread_mutex_unlock(&water_level_mutex);
+
+        // Affichage du niveau d'eau enregistré
+        printf("CentralManager water level : %f \n", fuel_level);
+
+        // Ajout du nieavu d'eau dans le buffer
+        circular_buffer_add(fuel_buffer, fuel_level);
+        //add_value_to_buffer(&water_buffer, water_level, WATER_TIME_INTERVAL);
+        // Calcul de la moyenne de niveau d'eau
+        fuel_average = average_buffer(fuel_buffer);
+
+        // Affichage du niveau d'eau moyen calculé
+        printf("CentralManager water average : %f \n", fuel_average);
+
+        //pthread_mutex_lock(&fuel_average);
+        // Ecriture du niveau d'eau à envoyer par le central manager
+        if (write(central->water_average_pipe[1], &fuel_average, sizeof(fuel_average)) == -1) {
+            perror("Erreur d'écriture dans central->water_average_pipe \n");
+        }
+        //pthread_mutex_unlock(&fuel_average_mutex);
 
 
     }

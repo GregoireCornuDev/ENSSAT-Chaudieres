@@ -216,6 +216,8 @@ CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../central_manager/central_manager.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../fuel_tank/fuel_tank_manager.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../simulation/tank_simulation.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../water_tank/water_tank_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../central_manager/central_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/control_panel_manager.h \

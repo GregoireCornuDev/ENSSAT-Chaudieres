@@ -13,8 +13,9 @@ void *control_panel_manager_thread(void* arg) {
     ControlPanelManager *panel = (void*)arg;//control_panel_manager_init();
 
     float water_average = 0.0;
+    float fuel_average = 0.0;
 
-    if(DEBUG == true) {
+    if(MODE_DEBUG == !true) {
         // Boucle blanche
         int i;
         while(1) {
@@ -36,6 +37,21 @@ void *control_panel_manager_thread(void* arg) {
 
         // Ecriture du niveau d'eau à envoyer par le central manager
         if (write(panel->water_average_gui_pipe[1], &water_average, sizeof(water_average)) == -1) {
+            perror("Erreur d'écriture dans panel->water_average_gui_pipe \n");
+        }
+
+        /** FUEL */
+        // Lecture du niveau d'eau moyen envoyé par le central manager
+        if (read(panel->fuel_average_pipe[0], &fuel_average, sizeof(fuel_average)) == -1) {
+            perror("Erreur de lecture dans panel->fuel_average_pipe \n");
+        }
+        panel->water_average = water_average;
+
+        // Affichage du niveau d'eau moyen enregistré
+        printf("ControlPanel fuel average : %f \n", water_average);
+
+        // Ecriture du niveau d'eau à envoyer par le central manager
+        if (write(panel->fuel_average_gui_pipe[1], &fuel_average, sizeof(fuel_average)) == -1) {
             perror("Erreur d'écriture dans panel->water_average_gui_pipe \n");
         }
     }

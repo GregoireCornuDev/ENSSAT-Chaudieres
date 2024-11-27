@@ -216,5 +216,7 @@ CMakeFiles/MyApplication.dir/src/pipes_manager.c.o: \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/central_manager.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/fuel_tank/fuel_tank_manager.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/simulation/tank_simulation.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_simulation.h
