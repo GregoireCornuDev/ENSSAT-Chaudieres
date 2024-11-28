@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <SDL_image.h>
-#include "control_panel_gui.h"
+#include "gui.h"
 #include <control_panel_manager.h>
 #include <unistd.h>
+#include "control_data.h"
 #include "../config.h"
 #include "indicator.h"
 #include "gauge.h"

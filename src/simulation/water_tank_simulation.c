@@ -21,7 +21,7 @@ void *water_tank_simulation_thread(void* arg) {
 
     float water_level = 0.0;
 
-    if(MODE_DEBUG == !true) {
+    if(MODE_DEBUG == true) {
         // Boucle blanche
         int i;
         while(1) {
@@ -97,7 +97,7 @@ void water_level_sensors_trigger(WaterTankSimulation *simulation) {
 
     // Si le nouveau trigger est différent
     if (new_trigger != last_trigger) {
-        //printf("Simulation Eau : Sensors trigger -> nouveau trigger à envoyer : %c \n", new_trigger);
+        printf("Simulation Eau : Sensors trigger -> nouveau trigger à envoyer : %c \n", new_trigger);
 
         // Enregistre le dernier trigger effectué dans la struct
         simulation->last_trigger = new_trigger;

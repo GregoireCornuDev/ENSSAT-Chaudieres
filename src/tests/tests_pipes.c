@@ -7,7 +7,7 @@
 #include "../water_tank/water_tank_manager.h"
 #include "../central_manager/central_manager.h"
 #include "../control_panel/control_panel_manager.h"
-#include "../control_panel/control_panel_gui.h"
+#include "../control_panel/gui.h"
 #include "tests_pipes.h"
 
 #include <errno.h>

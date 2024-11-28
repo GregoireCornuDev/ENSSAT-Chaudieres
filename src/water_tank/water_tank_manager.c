@@ -15,17 +15,15 @@ void* water_tank_manager_thread(void* arg) {
 
     printf("Water Tank Manager Thread started \n");
 
-    WaterTankManager *tank = (void*)arg;//water_tank_manager_init();
+    WaterTankManager *tank = (void*)arg;
     if (!tank) {
         printf("Échec d'initialisation de WaterTankManager\n");
         return NULL;
     }
 
-    char supply_command = '0';  // Vanne d'approvisionnement fermée par défaut
-    float use_command = 0.0;    // Vanne de sortie fermée par défaut (0.0 à 1.0)
     float water_level = 0.0;    // Niveau de l'eau
 
-    if(MODE_DEBUG == !true) {
+    if(MODE_DEBUG == true) {
         // Boucle blanche
         int i;
         while(1) {

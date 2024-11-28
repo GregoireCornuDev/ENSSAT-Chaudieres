@@ -15,10 +15,10 @@ set(SOURCES
         src/main.c
         src/threads_manager.c
         src/water_tank/water_tank_manager.c
-        src/water_tank/water_tank_simulation.c
-        src/fuel_tank/fuel_tank_manager.c
+        src/simulation/water_tank_simulation.c
         src/simulation/fuel_tank_simulation.c
-        src/control_panel/control_panel_gui.c
+        src/fuel_tank/fuel_tank_manager.c
+        src/control_panel/gui.c
         src/control_panel/control_panel_config.c
         src/control_panel/gauge.c
         src/central_manager/central_manager.c
@@ -28,10 +28,10 @@ set(SOURCES
         src/tests/tests_pipes.c
         src/config.c
         src/mutex_manager.c
-        src/control_panel/indicator.h
         src/control_panel/indicator.c
-        src/simulation/tank_simulation.h
         src/simulation/tank_simulation.c
+        src/control_panel/control_data.h
+        src/control_panel/control_data.c
 )
 
 # Créer l'exécutable

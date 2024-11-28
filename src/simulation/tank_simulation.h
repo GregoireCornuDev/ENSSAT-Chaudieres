@@ -5,7 +5,7 @@
 typedef struct {
     char *content;
     float content_level;                 // Niveau actuel du contenu
-    int content_level_sensor_pipe[2];    // Pipe pour le capteur du niveau dde contenu
+    int content_level_sensor_pipe[2];    // Pipe pour le capteur du niveau de contenu
     int content_level_trigger_pipe[2];   // Pipe pour les capteurs par déclenchement
     char last_trigger;                   // Dernier trigger enregistré
     int content_supply_pipe[2];          // Pipe pour contrôler la vanne d'approvisionnement

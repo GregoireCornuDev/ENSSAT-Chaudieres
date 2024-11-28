@@ -1,5 +1,5 @@
-CMakeFiles/MyApplication.dir/src/pipes_manager.c.o: \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/pipes_manager.c \
+CMakeFiles/MyApplication.dir/src/control_panel/gui.c.o: \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gui.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -23,22 +23,10 @@ CMakeFiles/MyApplication.dir/src/pipes_manager.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/pipes_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gui.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
- /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
- /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
- /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
- /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \
- /usr/include/SDL2/close_code.h /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
@@ -59,10 +47,15 @@ CMakeFiles/MyApplication.dir/src/pipes_manager.c.o: \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
- /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /usr/include/SDL2/SDL_image.h /usr/include/SDL2/SDL.h \
+ /usr/include/SDL2/SDL_main.h /usr/include/SDL2/SDL_stdinc.h \
+ /usr/include/SDL2/SDL_config.h \
+ /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
+ /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \
+ /usr/include/SDL2/close_code.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h /usr/include/wchar.h \
@@ -198,25 +191,18 @@ CMakeFiles/MyApplication.dir/src/pipes_manager.c.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gui.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
+ /usr/include/SDL2/SDL.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gauge.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/indicator.h \
- /usr/include/SDL2/SDL.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/simulation/water_tank_simulation.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_manager.h \
- /usr/include/pthread.h /usr/include/sched.h \
- /usr/include/x86_64-linux-gnu/bits/sched.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
- /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
- /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/bits/setjmp.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
- /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/central_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/fuel_tank/fuel_tank_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/simulation/fuel_tank_simulation.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/simulation/tank_simulation.h
+ /usr/include/SDL2/SDL.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_data.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/../config.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_config.h

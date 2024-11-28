@@ -4,7 +4,8 @@
 #include <pthread.h>
 #include "control_panel_manager.h"
 #include "water_tank/water_tank_manager.h"
-#include "water_tank/water_tank_simulation.h"
+#include "simulation/water_tank_simulation.h"
+#include "simulation/fuel_tank_simulation.h"
 #include "central_manager/central_manager.h"
 #include "fuel_tank/fuel_tank_manager.h"
 #include "simulation/tank_simulation.h"
@@ -112,20 +113,20 @@ int setup_water_pipes(WaterTankSimulation *simulation, WaterTankManager *tank, C
     return 0;
 }
 
-int setup_fuel_pipes(TankSimulation *simulation, FuelTankManager *fuel_manager, CentralManager *central_manager, ControlPanelManager *control_manager, ControlPanelGUI *gui) {
+int setup_fuel_pipes(FuelTankSimulation *simulation, FuelTankManager *fuel_manager, CentralManager *central_manager, ControlPanelManager *control_manager, ControlPanelGUI *gui) {
 
     /** WATER LEVEL SENSOR - AVERAGE */
     // Pipe pour le simulateur -> tank
-    if (pipe(simulation->content_level_sensor_pipe) == -1) {
+    if (pipe(simulation->fuel_level_sensor_pipe) == -1) {
         perror("Erreur lors de la création du pipe fuel_level_sensor_pipe");
         return -1;
     }
     // Le simulateur écrit dans [1], le tank lit dans [0]
-    fuel_manager->fuel_level_sensor_pipe[0] = simulation->content_level_sensor_pipe[0];
-    fuel_manager->fuel_level_sensor_pipe[1] = simulation->content_level_sensor_pipe[1];
+    fuel_manager->fuel_level_sensor_pipe[0] = simulation->fuel_level_sensor_pipe[0];
+    fuel_manager->fuel_level_sensor_pipe[1] = simulation->fuel_level_sensor_pipe[1];
 
     // Vérification des descripteurs
-    if (simulation->content_level_sensor_pipe[0] == -1 || simulation->content_level_sensor_pipe[1] == -1 || fuel_manager->fuel_level_sensor_pipe[0] == -1 || fuel_manager->fuel_level_sensor_pipe[1] == -1) {
+    if (simulation->fuel_level_sensor_pipe[0] == -1 || simulation->fuel_level_sensor_pipe[1] == -1 || fuel_manager->fuel_level_sensor_pipe[0] == -1 || fuel_manager->fuel_level_sensor_pipe[1] == -1) {
         perror("Erreur : l'un des descripteurs de fichiers du pipe fuel_level_sensor_pipe est invalide");
         return -1;
     }
@@ -177,16 +178,16 @@ int setup_fuel_pipes(TankSimulation *simulation, FuelTankManager *fuel_manager, 
 
     /** WATER LEVEL TRIGGER */
     // Pipe pour le simulateur -> tank
-    if (pipe(simulation->content_level_trigger_pipe) == -1) {
+    if (pipe(simulation->fuel_level_trigger_pipe) == -1) {
         perror("Erreur lors de la création du pipe water_level_trigger_pipe");
         return -1;
     }
     // Le simulateur écrit dans [1], le tank lit dans [0]
-    fuel_manager->fuel_level_trigger_pipe[0] = simulation->content_level_trigger_pipe[0];
-    fuel_manager->fuel_level_trigger_pipe[1] = simulation->content_level_trigger_pipe[1];
+    fuel_manager->fuel_level_trigger_pipe[0] = simulation->fuel_level_trigger_pipe[0];
+    fuel_manager->fuel_level_trigger_pipe[1] = simulation->fuel_level_trigger_pipe[1];
 
     // Vérification des descripteurs
-    if (simulation->content_level_trigger_pipe[0] == -1 || simulation->content_level_trigger_pipe[1] == -1 || fuel_manager->fuel_level_trigger_pipe[0] == -1 || fuel_manager->fuel_level_trigger_pipe[1] == -1) {
+    if (simulation->fuel_level_trigger_pipe[0] == -1 || simulation->fuel_level_trigger_pipe[1] == -1 || fuel_manager->fuel_level_trigger_pipe[0] == -1 || fuel_manager->fuel_level_trigger_pipe[1] == -1) {
         perror("Erreur : l'un des descripteurs de fichiers du pipe water_level_sensor_pipe est invalide");
         return -1;
     }
@@ -199,11 +200,11 @@ int setup_fuel_pipes(TankSimulation *simulation, FuelTankManager *fuel_manager, 
         return -1;
     }
     // Le tank écrit dans [1], la simulation lit dans [0]
-    simulation->content_supply_pipe[0] = fuel_manager->fuel_supply_pipe[0];
-    simulation->content_supply_pipe[1] = fuel_manager->fuel_supply_pipe[1];
+    simulation->fuel_supply_pipe[0] = fuel_manager->fuel_supply_pipe[0];
+    simulation->fuel_supply_pipe[1] = fuel_manager->fuel_supply_pipe[1];
 
     // Vérification des descripteurs
-    if (simulation->content_supply_pipe[0] == -1 || simulation->content_supply_pipe[1] == -1 || fuel_manager->fuel_supply_pipe[0] == -1 || fuel_manager->fuel_supply_pipe[1] == -1) {
+    if (simulation->fuel_supply_pipe[0] == -1 || simulation->fuel_supply_pipe[1] == -1 || fuel_manager->fuel_supply_pipe[0] == -1 || fuel_manager->fuel_supply_pipe[1] == -1) {
         perror("Erreur : l'un des descripteurs de fichiers du pipe water_supply_pipe est invalide");
         return -1;
     }

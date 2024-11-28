@@ -87,6 +87,7 @@
 				13,
 				14,
 				15,
+				16,
 				17,
 				19
 			]
@@ -156,6 +157,7 @@
 				13,
 				14,
 				15,
+				16,
 				17,
 				19
 			]
@@ -164,7 +166,6 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				16,
 				18
 			]
 		}
@@ -192,13 +193,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/water_tank/water_tank_simulation.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/fuel_tank/fuel_tank_manager.c",
+			"path" : "src/simulation/water_tank_simulation.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -210,7 +205,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/control_panel/control_panel_gui.c",
+			"path" : "src/fuel_tank/fuel_tank_manager.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/control_panel/gui.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -269,24 +270,25 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/control_panel/indicator.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/control_panel/indicator.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "src/simulation/tank_simulation.h",
+			"compileGroupIndex" : 0,
+			"path" : "src/simulation/tank_simulation.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/control_panel/control_data.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/simulation/tank_simulation.c",
+			"path" : "src/control_panel/control_data.c",
 			"sourceGroupIndex" : 0
 		}
 	],

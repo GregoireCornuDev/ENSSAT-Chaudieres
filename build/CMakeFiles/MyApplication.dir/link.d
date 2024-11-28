@@ -5,10 +5,10 @@ MyApplication: \
   CMakeFiles/MyApplication.dir/src/main.c.o \
   CMakeFiles/MyApplication.dir/src/threads_manager.c.o \
   CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.o \
-  CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o \
-  CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o \
+  CMakeFiles/MyApplication.dir/src/simulation/water_tank_simulation.c.o \
   CMakeFiles/MyApplication.dir/src/simulation/fuel_tank_simulation.c.o \
-  CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o \
+  CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o \
+  CMakeFiles/MyApplication.dir/src/control_panel/gui.c.o \
   CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o \
   CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.o \
   CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o \
@@ -20,6 +20,7 @@ MyApplication: \
   CMakeFiles/MyApplication.dir/src/mutex_manager.c.o \
   CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.o \
   CMakeFiles/MyApplication.dir/src/simulation/tank_simulation.c.o \
+  CMakeFiles/MyApplication.dir/src/control_panel/control_data.c.o \
   /usr/lib/x86_64-linux-gnu/libSDL2.so \
   /usr/lib/x86_64-linux-gnu/libSDL2_image.so \
   /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so \
@@ -253,13 +254,13 @@ CMakeFiles/MyApplication.dir/src/threads_manager.c.o:
 
 CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.o:
 
-CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o:
-
-CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o:
+CMakeFiles/MyApplication.dir/src/simulation/water_tank_simulation.c.o:
 
 CMakeFiles/MyApplication.dir/src/simulation/fuel_tank_simulation.c.o:
 
-CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o:
+CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.o:
+
+CMakeFiles/MyApplication.dir/src/control_panel/gui.c.o:
 
 CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.o:
 
@@ -282,6 +283,8 @@ CMakeFiles/MyApplication.dir/src/mutex_manager.c.o:
 CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.o:
 
 CMakeFiles/MyApplication.dir/src/simulation/tank_simulation.c.o:
+
+CMakeFiles/MyApplication.dir/src/control_panel/control_data.c.o:
 
 /usr/lib/x86_64-linux-gnu/libSDL2.so:
 

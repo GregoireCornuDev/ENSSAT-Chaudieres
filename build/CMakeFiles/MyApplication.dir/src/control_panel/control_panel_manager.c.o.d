@@ -1,7 +1,7 @@
 CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o: \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.c \
  /usr/include/stdc-predef.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gui.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gui.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
@@ -194,6 +194,7 @@ CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.o: \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/indicator.h \
  /usr/include/SDL2/SDL.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_data.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \

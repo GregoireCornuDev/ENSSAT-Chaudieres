@@ -72,7 +72,7 @@ CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o: \
  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_gui.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/../control_panel/gui.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
@@ -212,8 +212,8 @@ CMakeFiles/MyApplication.dir/src/central_manager/central_manager.c.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gauge.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/indicator.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/../control_panel/gauge.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/../control_panel/indicator.h \
  /usr/include/SDL2/SDL.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_config.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/central_manager/circulare_buffer.h \

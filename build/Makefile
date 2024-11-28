@@ -201,6 +201,30 @@ src/config.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/config.c.s
 .PHONY : src/config.c.s
 
+src/control_panel/control_data.o: src/control_panel/control_data.c.o
+.PHONY : src/control_panel/control_data.o
+
+# target to build an object file
+src/control_panel/control_data.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_data.c.o
+.PHONY : src/control_panel/control_data.c.o
+
+src/control_panel/control_data.i: src/control_panel/control_data.c.i
+.PHONY : src/control_panel/control_data.i
+
+# target to preprocess a source file
+src/control_panel/control_data.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_data.c.i
+.PHONY : src/control_panel/control_data.c.i
+
+src/control_panel/control_data.s: src/control_panel/control_data.c.s
+.PHONY : src/control_panel/control_data.s
+
+# target to generate assembly for a file
+src/control_panel/control_data.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_data.c.s
+.PHONY : src/control_panel/control_data.c.s
+
 src/control_panel/control_panel_config.o: src/control_panel/control_panel_config.c.o
 .PHONY : src/control_panel/control_panel_config.o
 
@@ -224,30 +248,6 @@ src/control_panel/control_panel_config.s: src/control_panel/control_panel_config
 src/control_panel/control_panel_config.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_config.c.s
 .PHONY : src/control_panel/control_panel_config.c.s
-
-src/control_panel/control_panel_gui.o: src/control_panel/control_panel_gui.c.o
-.PHONY : src/control_panel/control_panel_gui.o
-
-# target to build an object file
-src/control_panel/control_panel_gui.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.o
-.PHONY : src/control_panel/control_panel_gui.c.o
-
-src/control_panel/control_panel_gui.i: src/control_panel/control_panel_gui.c.i
-.PHONY : src/control_panel/control_panel_gui.i
-
-# target to preprocess a source file
-src/control_panel/control_panel_gui.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.i
-.PHONY : src/control_panel/control_panel_gui.c.i
-
-src/control_panel/control_panel_gui.s: src/control_panel/control_panel_gui.c.s
-.PHONY : src/control_panel/control_panel_gui.s
-
-# target to generate assembly for a file
-src/control_panel/control_panel_gui.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_gui.c.s
-.PHONY : src/control_panel/control_panel_gui.c.s
 
 src/control_panel/control_panel_manager.o: src/control_panel/control_panel_manager.c.o
 .PHONY : src/control_panel/control_panel_manager.o
@@ -296,6 +296,30 @@ src/control_panel/gauge.s: src/control_panel/gauge.c.s
 src/control_panel/gauge.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.s
 .PHONY : src/control_panel/gauge.c.s
+
+src/control_panel/gui.o: src/control_panel/gui.c.o
+.PHONY : src/control_panel/gui.o
+
+# target to build an object file
+src/control_panel/gui.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gui.c.o
+.PHONY : src/control_panel/gui.c.o
+
+src/control_panel/gui.i: src/control_panel/gui.c.i
+.PHONY : src/control_panel/gui.i
+
+# target to preprocess a source file
+src/control_panel/gui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gui.c.i
+.PHONY : src/control_panel/gui.c.i
+
+src/control_panel/gui.s: src/control_panel/gui.c.s
+.PHONY : src/control_panel/gui.s
+
+# target to generate assembly for a file
+src/control_panel/gui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gui.c.s
+.PHONY : src/control_panel/gui.c.s
 
 src/control_panel/indicator.o: src/control_panel/indicator.c.o
 .PHONY : src/control_panel/indicator.o
@@ -465,6 +489,30 @@ src/simulation/tank_simulation.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/tank_simulation.c.s
 .PHONY : src/simulation/tank_simulation.c.s
 
+src/simulation/water_tank_simulation.o: src/simulation/water_tank_simulation.c.o
+.PHONY : src/simulation/water_tank_simulation.o
+
+# target to build an object file
+src/simulation/water_tank_simulation.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/water_tank_simulation.c.o
+.PHONY : src/simulation/water_tank_simulation.c.o
+
+src/simulation/water_tank_simulation.i: src/simulation/water_tank_simulation.c.i
+.PHONY : src/simulation/water_tank_simulation.i
+
+# target to preprocess a source file
+src/simulation/water_tank_simulation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/water_tank_simulation.c.i
+.PHONY : src/simulation/water_tank_simulation.c.i
+
+src/simulation/water_tank_simulation.s: src/simulation/water_tank_simulation.c.s
+.PHONY : src/simulation/water_tank_simulation.s
+
+# target to generate assembly for a file
+src/simulation/water_tank_simulation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/simulation/water_tank_simulation.c.s
+.PHONY : src/simulation/water_tank_simulation.c.s
+
 src/tests/tests_pipes.o: src/tests/tests_pipes.c.o
 .PHONY : src/tests/tests_pipes.o
 
@@ -537,30 +585,6 @@ src/water_tank/water_tank_manager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_manager.c.s
 .PHONY : src/water_tank/water_tank_manager.c.s
 
-src/water_tank/water_tank_simulation.o: src/water_tank/water_tank_simulation.c.o
-.PHONY : src/water_tank/water_tank_simulation.o
-
-# target to build an object file
-src/water_tank/water_tank_simulation.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.o
-.PHONY : src/water_tank/water_tank_simulation.c.o
-
-src/water_tank/water_tank_simulation.i: src/water_tank/water_tank_simulation.c.i
-.PHONY : src/water_tank/water_tank_simulation.i
-
-# target to preprocess a source file
-src/water_tank/water_tank_simulation.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.i
-.PHONY : src/water_tank/water_tank_simulation.c.i
-
-src/water_tank/water_tank_simulation.s: src/water_tank/water_tank_simulation.c.s
-.PHONY : src/water_tank/water_tank_simulation.s
-
-# target to generate assembly for a file
-src/water_tank/water_tank_simulation.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/water_tank/water_tank_simulation.c.s
-.PHONY : src/water_tank/water_tank_simulation.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -579,18 +603,21 @@ help:
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
+	@echo "... src/control_panel/control_data.o"
+	@echo "... src/control_panel/control_data.i"
+	@echo "... src/control_panel/control_data.s"
 	@echo "... src/control_panel/control_panel_config.o"
 	@echo "... src/control_panel/control_panel_config.i"
 	@echo "... src/control_panel/control_panel_config.s"
-	@echo "... src/control_panel/control_panel_gui.o"
-	@echo "... src/control_panel/control_panel_gui.i"
-	@echo "... src/control_panel/control_panel_gui.s"
 	@echo "... src/control_panel/control_panel_manager.o"
 	@echo "... src/control_panel/control_panel_manager.i"
 	@echo "... src/control_panel/control_panel_manager.s"
 	@echo "... src/control_panel/gauge.o"
 	@echo "... src/control_panel/gauge.i"
 	@echo "... src/control_panel/gauge.s"
+	@echo "... src/control_panel/gui.o"
+	@echo "... src/control_panel/gui.i"
+	@echo "... src/control_panel/gui.s"
 	@echo "... src/control_panel/indicator.o"
 	@echo "... src/control_panel/indicator.i"
 	@echo "... src/control_panel/indicator.s"
@@ -612,6 +639,9 @@ help:
 	@echo "... src/simulation/tank_simulation.o"
 	@echo "... src/simulation/tank_simulation.i"
 	@echo "... src/simulation/tank_simulation.s"
+	@echo "... src/simulation/water_tank_simulation.o"
+	@echo "... src/simulation/water_tank_simulation.i"
+	@echo "... src/simulation/water_tank_simulation.s"
 	@echo "... src/tests/tests_pipes.o"
 	@echo "... src/tests/tests_pipes.i"
 	@echo "... src/tests/tests_pipes.s"
@@ -621,9 +651,6 @@ help:
 	@echo "... src/water_tank/water_tank_manager.o"
 	@echo "... src/water_tank/water_tank_manager.i"
 	@echo "... src/water_tank/water_tank_manager.s"
-	@echo "... src/water_tank/water_tank_simulation.o"
-	@echo "... src/water_tank/water_tank_simulation.i"
-	@echo "... src/water_tank/water_tank_simulation.s"
 .PHONY : help
 
 

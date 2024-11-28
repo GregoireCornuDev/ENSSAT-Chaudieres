@@ -23,7 +23,7 @@ void* fuel_tank_manager_thread(void* arg) {
 
     float fuel_level = 0.0;    // Niveau de l'eau
 
-    if(MODE_DEBUG == !true) {
+    if(MODE_DEBUG == true) {
         // Boucle blanche
         int i;
         while(1) {
@@ -43,7 +43,7 @@ void* fuel_tank_manager_thread(void* arg) {
         printf("TankManager fuel level : %f \n", fuel_level);
 
         // Transmet le niveau de fuel au Central Manager
-        fuel_level_send(tank);
+        //fuel_level_send(tank);
 
         // Analyse les déclencheurs des capteurs et réagit en conséquence (commande les vannes)
         fuel_level_triggers_react(tank);
@@ -59,10 +59,6 @@ void fuel_tank_manager_init(FuelTankManager *fuel_manager) {
 void fuel_level_receives(FuelTankManager *fuel_manager) {
 
     float fuel_level = fuel_manager->fuel_level;
-
-    // Rend le pipe non bloquant
-    int flags = fcntl(fuel_manager->fuel_level_sensor_pipe[0], F_GETFL, 0);
-    fcntl(fuel_manager->fuel_level_sensor_pipe[0], F_SETFL, flags | O_NONBLOCK);
 
     //pthread_mutex_lock(&fuel_level_sensor_mutex);
     // Lecture du niveau de fuel envoyé par le simulateur
