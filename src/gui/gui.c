@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <SDL_image.h>
-#include "gui.h"
-#include <control_panel_manager.h>
+#include "../control_panel/gui.h"
+#include <../control_panel/control_panel_manager.h>
 #include <unistd.h>
-#include "control_data.h"
+#include "../control_panel/control_data.h"
 #include "../config.h"
-#include "indicator.h"
+#include "../control_panel/indicator.h"
 #include "gauge.h"
 
-#include "control_panel_config.h"
+#include "../control_panel/control_panel_config.h"
 
 // Fonction pour charger une texture à partir d'un chemin
 static SDL_Texture* load_texture(SDL_Renderer *renderer, const char *file_path) {

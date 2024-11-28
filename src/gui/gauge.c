@@ -1,4 +1,4 @@
-#include "gauge.h"
+#include "../control_panel/gauge.h"
 
 Gauge *gauge_init(int x, int y, int width, int height, SDL_Color fg, SDL_Color bg) {
 

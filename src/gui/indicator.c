@@ -1,8 +1,8 @@
 #include <SDL_ttf.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "indicator.h"
-#include <control_panel_config.h>
+#include "../control_panel/indicator.h"
+#include <../control_panel/control_panel_config.h>
 #include <unistd.h>
 #include <limits.h>
 
