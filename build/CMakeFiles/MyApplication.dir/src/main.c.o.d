@@ -212,11 +212,12 @@ CMakeFiles/MyApplication.dir/src/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/fuel_tank/fuel_tank_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/threads_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gui.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/gui/gui.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
  /usr/include/SDL2/SDL.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/gauge.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/indicator.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/gui/gauge.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/gui/indicator.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/gui/light.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/pipes_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_manager.h \

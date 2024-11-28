@@ -273,78 +273,6 @@ src/control_panel/control_panel_manager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/control_panel_manager.c.s
 .PHONY : src/control_panel/control_panel_manager.c.s
 
-src/control_panel/gauge.o: src/control_panel/gauge.c.o
-.PHONY : src/control_panel/gauge.o
-
-# target to build an object file
-src/control_panel/gauge.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.o
-.PHONY : src/control_panel/gauge.c.o
-
-src/control_panel/gauge.i: src/control_panel/gauge.c.i
-.PHONY : src/control_panel/gauge.i
-
-# target to preprocess a source file
-src/control_panel/gauge.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.i
-.PHONY : src/control_panel/gauge.c.i
-
-src/control_panel/gauge.s: src/control_panel/gauge.c.s
-.PHONY : src/control_panel/gauge.s
-
-# target to generate assembly for a file
-src/control_panel/gauge.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gauge.c.s
-.PHONY : src/control_panel/gauge.c.s
-
-src/control_panel/gui.o: src/control_panel/gui.c.o
-.PHONY : src/control_panel/gui.o
-
-# target to build an object file
-src/control_panel/gui.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gui.c.o
-.PHONY : src/control_panel/gui.c.o
-
-src/control_panel/gui.i: src/control_panel/gui.c.i
-.PHONY : src/control_panel/gui.i
-
-# target to preprocess a source file
-src/control_panel/gui.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gui.c.i
-.PHONY : src/control_panel/gui.c.i
-
-src/control_panel/gui.s: src/control_panel/gui.c.s
-.PHONY : src/control_panel/gui.s
-
-# target to generate assembly for a file
-src/control_panel/gui.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/gui.c.s
-.PHONY : src/control_panel/gui.c.s
-
-src/control_panel/indicator.o: src/control_panel/indicator.c.o
-.PHONY : src/control_panel/indicator.o
-
-# target to build an object file
-src/control_panel/indicator.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.o
-.PHONY : src/control_panel/indicator.c.o
-
-src/control_panel/indicator.i: src/control_panel/indicator.c.i
-.PHONY : src/control_panel/indicator.i
-
-# target to preprocess a source file
-src/control_panel/indicator.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.i
-.PHONY : src/control_panel/indicator.c.i
-
-src/control_panel/indicator.s: src/control_panel/indicator.c.s
-.PHONY : src/control_panel/indicator.s
-
-# target to generate assembly for a file
-src/control_panel/indicator.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/control_panel/indicator.c.s
-.PHONY : src/control_panel/indicator.c.s
-
 src/fuel_tank/fuel_tank_manager.o: src/fuel_tank/fuel_tank_manager.c.o
 .PHONY : src/fuel_tank/fuel_tank_manager.o
 
@@ -368,6 +296,102 @@ src/fuel_tank/fuel_tank_manager.s: src/fuel_tank/fuel_tank_manager.c.s
 src/fuel_tank/fuel_tank_manager.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/fuel_tank/fuel_tank_manager.c.s
 .PHONY : src/fuel_tank/fuel_tank_manager.c.s
+
+src/gui/gauge.o: src/gui/gauge.c.o
+.PHONY : src/gui/gauge.o
+
+# target to build an object file
+src/gui/gauge.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/gauge.c.o
+.PHONY : src/gui/gauge.c.o
+
+src/gui/gauge.i: src/gui/gauge.c.i
+.PHONY : src/gui/gauge.i
+
+# target to preprocess a source file
+src/gui/gauge.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/gauge.c.i
+.PHONY : src/gui/gauge.c.i
+
+src/gui/gauge.s: src/gui/gauge.c.s
+.PHONY : src/gui/gauge.s
+
+# target to generate assembly for a file
+src/gui/gauge.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/gauge.c.s
+.PHONY : src/gui/gauge.c.s
+
+src/gui/gui.o: src/gui/gui.c.o
+.PHONY : src/gui/gui.o
+
+# target to build an object file
+src/gui/gui.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/gui.c.o
+.PHONY : src/gui/gui.c.o
+
+src/gui/gui.i: src/gui/gui.c.i
+.PHONY : src/gui/gui.i
+
+# target to preprocess a source file
+src/gui/gui.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/gui.c.i
+.PHONY : src/gui/gui.c.i
+
+src/gui/gui.s: src/gui/gui.c.s
+.PHONY : src/gui/gui.s
+
+# target to generate assembly for a file
+src/gui/gui.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/gui.c.s
+.PHONY : src/gui/gui.c.s
+
+src/gui/indicator.o: src/gui/indicator.c.o
+.PHONY : src/gui/indicator.o
+
+# target to build an object file
+src/gui/indicator.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/indicator.c.o
+.PHONY : src/gui/indicator.c.o
+
+src/gui/indicator.i: src/gui/indicator.c.i
+.PHONY : src/gui/indicator.i
+
+# target to preprocess a source file
+src/gui/indicator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/indicator.c.i
+.PHONY : src/gui/indicator.c.i
+
+src/gui/indicator.s: src/gui/indicator.c.s
+.PHONY : src/gui/indicator.s
+
+# target to generate assembly for a file
+src/gui/indicator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/indicator.c.s
+.PHONY : src/gui/indicator.c.s
+
+src/gui/light.o: src/gui/light.c.o
+.PHONY : src/gui/light.o
+
+# target to build an object file
+src/gui/light.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/light.c.o
+.PHONY : src/gui/light.c.o
+
+src/gui/light.i: src/gui/light.c.i
+.PHONY : src/gui/light.i
+
+# target to preprocess a source file
+src/gui/light.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/light.c.i
+.PHONY : src/gui/light.c.i
+
+src/gui/light.s: src/gui/light.c.s
+.PHONY : src/gui/light.s
+
+# target to generate assembly for a file
+src/gui/light.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApplication.dir/build.make CMakeFiles/MyApplication.dir/src/gui/light.c.s
+.PHONY : src/gui/light.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -612,18 +636,21 @@ help:
 	@echo "... src/control_panel/control_panel_manager.o"
 	@echo "... src/control_panel/control_panel_manager.i"
 	@echo "... src/control_panel/control_panel_manager.s"
-	@echo "... src/control_panel/gauge.o"
-	@echo "... src/control_panel/gauge.i"
-	@echo "... src/control_panel/gauge.s"
-	@echo "... src/control_panel/gui.o"
-	@echo "... src/control_panel/gui.i"
-	@echo "... src/control_panel/gui.s"
-	@echo "... src/control_panel/indicator.o"
-	@echo "... src/control_panel/indicator.i"
-	@echo "... src/control_panel/indicator.s"
 	@echo "... src/fuel_tank/fuel_tank_manager.o"
 	@echo "... src/fuel_tank/fuel_tank_manager.i"
 	@echo "... src/fuel_tank/fuel_tank_manager.s"
+	@echo "... src/gui/gauge.o"
+	@echo "... src/gui/gauge.i"
+	@echo "... src/gui/gauge.s"
+	@echo "... src/gui/gui.o"
+	@echo "... src/gui/gui.i"
+	@echo "... src/gui/gui.s"
+	@echo "... src/gui/indicator.o"
+	@echo "... src/gui/indicator.i"
+	@echo "... src/gui/indicator.s"
+	@echo "... src/gui/light.o"
+	@echo "... src/gui/light.i"
+	@echo "... src/gui/light.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

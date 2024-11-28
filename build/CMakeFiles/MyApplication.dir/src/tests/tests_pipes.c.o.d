@@ -70,7 +70,7 @@ CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o: \
  /usr/include/string.h /usr/include/strings.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../pipes_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/control_panel_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/gui.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../gui/gui.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/control_panel/control_panel_manager.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
@@ -209,11 +209,12 @@ CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/gauge.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/indicator.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../gui/gauge.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../gui/indicator.h \
  /usr/include/SDL2/SDL.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../simulation/water_tank_simulation.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../gui/light.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../simulation/water_tank_simulation.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/water_tank/water_tank_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../central_manager/central_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../fuel_tank/fuel_tank_manager.h \
@@ -221,7 +222,7 @@ CMakeFiles/MyApplication.dir/src/tests/tests_pipes.c.o: \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../water_tank/water_tank_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../central_manager/central_manager.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/control_panel_manager.h \
- /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../control_panel/gui.h \
+ /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../gui/gui.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/tests_pipes.h \
  /home/gregoire/ENSSAT/IAI-2/Systemes-TempsReel/Projet/src/tests/../simulation/water_tank_simulation.h \
  /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
