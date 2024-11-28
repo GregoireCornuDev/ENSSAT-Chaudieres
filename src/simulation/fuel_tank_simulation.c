@@ -144,7 +144,7 @@ void fuel_supply_valve_open_close(FuelTankSimulation *fuel_tank_simulation) {
     int open_close_valve = 0;// open = 1 | close = 0
 
 
-    printf("Simulation Fuel : Vanne d'approvisionnement -> ? \n");
+    //printf("Simulation Fuel : Vanne d'approvisionnement -> ? \n");
 
     // Paramètre le pipe comme non bloquant
     int flags = fcntl(fuel_tank_simulation->fuel_supply_pipe[0], F_GETFL, 0);

@@ -12,7 +12,7 @@
 static SDL_Texture* create_text_texture(SDL_Renderer *renderer, TTF_Font *font, const char *text, SDL_Color color) {
     SDL_Surface *surface = TTF_RenderText_Blended(font, text, color);
     if (!surface) {
-        printf("Erreur de création de surface de texte : %s\n", TTF_GetError());
+        //printf("Erreur de création de surface de texte : %s\n", TTF_GetError());
         return NULL;
     }
     SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
@@ -37,14 +37,14 @@ Indicator* indicator_init(SDL_Renderer *renderer, int x, int y, int w, int h, SD
 
     // Initialisation de TTF
     if (TTF_Init() == -1) {
-        printf("Erreur SDL_ttf init : %s\n", TTF_GetError());
+        //printf("Erreur SDL_ttf init : %s\n", TTF_GetError());
         return NULL;
     }
 
     // Initialiser les polices
     TTF_Font *font = TTF_OpenFont("resources/Impacted2.0.ttf", 16);
     if (!font) {
-        printf("Erreur de chargement de police 1: %s\n", TTF_GetError());
+        //printf("Erreur de chargement de police 1: %s\n", TTF_GetError());
         free(indicator);
         return NULL;
     }
@@ -62,13 +62,13 @@ void indicator_update(Indicator *indicator, SDL_Renderer *renderer, float new_va
         perror("Erreur de chargement de indicator ou du renderer");
         return;
     }
-    printf("Indicator value: %f\n", new_value);
+    //printf("Indicator value: %f\n", new_value);
     indicator->value = new_value;
 
     // Mettre à jour la texture de la valeur
     TTF_Font *font = TTF_OpenFont("resources/Impacted2.0.ttf", 16);
     if (!font) {
-        printf("Erreur de chargement de police 2: %s\n", TTF_GetError());
+        //printf("Erreur de chargement de police 2: %s\n", TTF_GetError());
         return;
     }
 

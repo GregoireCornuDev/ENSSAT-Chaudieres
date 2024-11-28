@@ -125,7 +125,7 @@ void water_level_triggers_react(WaterTankManager *tank) {
     } else {
         if (errno == EAGAIN) {
             // Pas de données, on passe à autre chose
-            printf("Pas de données disponibles dans le pipe water_level_trigger_pipe.\n");
+            //printf("Pas de données disponibles dans le pipe water_level_trigger_pipe.\n");
         } else {
             perror("Erreur de lecture dans le pipe water_level_trigger_pipe");
         }

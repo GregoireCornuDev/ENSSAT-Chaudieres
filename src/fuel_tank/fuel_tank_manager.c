@@ -43,7 +43,7 @@ void* fuel_tank_manager_thread(void* arg) {
         printf("TankManager fuel level : %f \n", fuel_level);
 
         // Transmet le niveau de fuel au Central Manager
-        //fuel_level_send(tank);
+        fuel_level_send(tank);
 
         // Analyse les déclencheurs des capteurs et réagit en conséquence (commande les vannes)
         fuel_level_triggers_react(tank);
@@ -125,7 +125,7 @@ void fuel_level_triggers_react(FuelTankManager *fuel_manager) {
     } else {
         if (errno == EAGAIN) {
             // Pas de données, on passe à autre chose
-            printf("Pas de données disponibles dans le pipe fuel_level_trigger_pipe.\n");
+            //printf("Pas de données disponibles dans le pipe fuel_level_trigger_pipe.\n");
         } else {
             perror("Erreur de lecture dans le pipe fuel_level_trigger_pipe");
         }

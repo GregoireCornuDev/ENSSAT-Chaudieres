@@ -16,7 +16,7 @@
 static SDL_Texture* load_texture(SDL_Renderer *renderer, const char *file_path) {
     SDL_Texture *texture = IMG_LoadTexture(renderer, file_path);
     if (!texture) {
-        printf("Erreur : Impossible de charger %s. SDL_image : %s\n", file_path, IMG_GetError());
+        //printf("Erreur : Impossible de charger %s. SDL_image : %s\n", file_path, IMG_GetError());
     }
 
     return texture;
@@ -24,13 +24,13 @@ static SDL_Texture* load_texture(SDL_Renderer *renderer, const char *file_path) 
 
 void *control_panel_gui_thread(void *arg) {
 
-    printf("Control Panel GUI Thread Started\n");
+    //printf("Control Panel GUI Thread Started\n");
 
     ControlPanelGUI *gui = (void*)arg;
     control_panel_gui_init(gui);
 
 
-    if(MODE_DEBUG == !true) {
+    if(MODE_DEBUG == true) {
         // Boucle blanche
         int i;
         while(1) {
@@ -46,16 +46,21 @@ void *control_panel_gui_thread(void *arg) {
     SDL_Event event;
 
     while (running) {
+        //printf("Control Panel GUI Thread Running\n");
 
+        water_average = CONTROL_DATA->water_average;
+        fuel_average = CONTROL_DATA->fuel_average;
+
+/*
         // Lecture du niveau d'eau moyen envoyé par le central manager
         if (read(gui->water_average_gui_pipe[0], &water_average, sizeof(water_average)) == -1) {
             perror("Erreur de lecture dans gui->water_average_gui_pipe \n");
         }
-        printf("GUI water_average : %f\n", water_average);
+        //printf("GUI water_average : %f\n", water_average);
         fflush(stdout);
         if(gui->water_indicator == NULL)
         {
-            printf("Erreur de lecture dans gui->water_indicator \n");
+            //printf("Erreur de lecture dans gui->water_indicator \n");
         }
 
 
@@ -63,24 +68,29 @@ void *control_panel_gui_thread(void *arg) {
         if (read(gui->fuel_average_gui_pipe[0], &fuel_average, sizeof(fuel_average)) == -1) {
             perror("Erreur de lecture dans gui->water_average_gui_pipe \n");
         }
-        printf("GUI water_average : %f\n", water_average);
+        //printf("GUI water_average : %f\n", water_average);
         fflush(stdout);
         if(gui->fuel_indicator == NULL)
         {
-            printf("Erreur de lecture dans gui->water_indicator \n");
+            //printf("Erreur de lecture dans gui->water_indicator \n");
         }
 
-        printf("Update de l'écran \n");
+        //printf("Update de l'écran \n");
         fflush(stdout);
-
+*/
         // Met à jour la valeur de la jauge
-        printf("Mise à jour de la valeur des jauges \n");
+        //printf("Mise à jour de la valeur des jauges \n");
         gauge_update(gui->water_gauge, water_average);
-        gauge_update(gui->fuel_gauge, fuel_average);
+         gauge_update(gui->fuel_gauge, fuel_average);
 
-        printf("Mise à jour de la valeur des indicateurs \n");
+
+        //printf("Mise à jour de la valeur des indicateurs \n");
         indicator_update(gui->water_indicator, gui->renderer, water_average);
         indicator_update(gui->fuel_indicator, gui->renderer, fuel_average);
+
+
+        //printf("------------------------> Ici \n");
+        fflush(stdout);
 
 
         // Gestion des événements SDL
@@ -107,11 +117,11 @@ void *control_panel_gui_init(ControlPanelGUI *gui ) {
 
     // Gestion de la fenêtre
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
-        printf("Erreur SDL : %s\n", SDL_GetError());
+        //printf("Erreur SDL : %s\n", SDL_GetError());
         return NULL;
     }
     if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
-        printf("Erreur SDL_image : %s\n", IMG_GetError());
+        //printf("Erreur SDL_image : %s\n", IMG_GetError());
         SDL_Quit();
         return NULL;
     }
@@ -120,7 +130,7 @@ void *control_panel_gui_init(ControlPanelGUI *gui ) {
                                       SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
                                       800, 600, SDL_WINDOW_SHOWN);
     if (!window) {
-        printf("Erreur fenêtre : %s\n", SDL_GetError());
+        //printf("Erreur fenêtre : %s\n", SDL_GetError());
         IMG_Quit();
         SDL_Quit();
         return NULL;
@@ -128,7 +138,7 @@ void *control_panel_gui_init(ControlPanelGUI *gui ) {
 
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if (!renderer) {
-        printf("Erreur renderer : %s\n", SDL_GetError());
+        //printf("Erreur renderer : %s\n", SDL_GetError());
         SDL_DestroyWindow(window);
         IMG_Quit();
         SDL_Quit();
@@ -147,30 +157,31 @@ void *control_panel_gui_init(ControlPanelGUI *gui ) {
     gui->renderer = renderer;
     gui->texture_count = control_panel_image_count;
     gui->textures = malloc(gui->texture_count * sizeof(SDL_Texture *));
+
     // Initialiser la jauge d'eau
     SDL_Color water_fg = {0, 255, 0, 255}; // Vert
     SDL_Color water_bg = {50, 50, 50, 255}; // Gris
-    gui->water_gauge = gauge_init(50, 100, 30, 240, water_fg, water_bg);
+    gui->water_gauge = gauge_init(50, 150, 30, 240, water_fg, water_bg);
 
     // Initialiser la jauge de fuel
     SDL_Color fuel_fg = {0, 255, 0, 255}; // Vert
     SDL_Color fuel_bg = {50, 50, 50, 255}; // Gris
-    gui->fuel_gauge = gauge_init(50, 200, 30, 240, fuel_fg, fuel_bg);
+    gui->fuel_gauge = gauge_init(200, 150, 30, 240, fuel_fg, fuel_bg);
 
     // Initiliser indicateur de l'eau
     SDL_Color water_rect_color = {64, 164, 223, 255}; // Couleur de la jauge eau
     SDL_Color water_text_color = {255, 255, 255, 255}; // Couleur du texte
-    gui->water_indicator = indicator_init(gui->renderer, 50, 50, 150, 80, water_rect_color, water_text_color, "Water Level");
+    gui->water_indicator = indicator_init(gui->renderer, 25, 50, 150, 80, water_rect_color, water_text_color, "Water Level");
 
     // Initiliser indicateur de fuel
     SDL_Color fuel_rect_color = {36, 89, 100, 255}; // Couleur de la jauge fuel
     SDL_Color fuel_text_color = {255, 255, 255, 255}; // Couleur du texte
-    gui->water_indicator = indicator_init(gui->renderer, 50, 50, 150, 80, fuel_rect_color, fuel_text_color, "Water Level");
+    gui->fuel_indicator = indicator_init(gui->renderer, 225, 50, 150, 80, fuel_rect_color, fuel_text_color, "Fuel Level");
 
 
 
     if (!gui->textures) {
-        printf("Erreur : Allocation mémoire échouée pour les textures.\n");
+        //printf("Erreur : Allocation mémoire échouée pour les textures.\n");
         free(gui);
         return NULL;
     }
@@ -179,14 +190,14 @@ void *control_panel_gui_init(ControlPanelGUI *gui ) {
     for (int i = 0; i < gui->texture_count; ++i) {
         gui->textures[i] = load_texture(renderer, control_panel_images[i].file_path);
         if (!gui->textures[i]) {
-            printf("Erreur lors du chargement de l'image : %s\n", control_panel_images[i].file_path);
+            //printf("Erreur lors du chargement de l'image : %s\n", control_panel_images[i].file_path);
         } else {
-            printf("Texture chargée : %s\n", control_panel_images[i].file_path);
+            //printf("Texture chargée : %s\n", control_panel_images[i].file_path);
         }
     }
 
-    printf("Control Panel Manager GUI Initialized\n");
-    //return gui;
+    //printf("Control Panel Manager GUI Initialized\n");
+
 }
 
 // Afficher les images
@@ -197,7 +208,7 @@ void control_panel_gui_render(ControlPanelGUI *gui) {
         SDL_RenderCopy(gui->renderer, gui->textures[i], NULL, &control_panel_images[i].rect);
         const char *error = SDL_GetError();
         if (*error) {
-            printf("Erreur SDL : %s\n", error);
+            //printf("Erreur SDL : %s\n", error);
             SDL_ClearError();
         }
     }

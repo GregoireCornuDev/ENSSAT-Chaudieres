@@ -32,7 +32,7 @@ void gauge_render(SDL_Renderer* renderer, Gauge* gauge) {
 void gauge_update(Gauge* gauge, float new_value) {
     if (!gauge) return;
 
-    printf("Gauge value: %f\n", new_value);
+    //printff("Gauge value: %f\n", new_value);
     // Limiter la valeur entre 0 et 100 pour rester dans les limites de la jauge
     if (new_value < 0) {
         gauge->value = 0;
